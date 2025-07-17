@@ -1,0 +1,27 @@
+{
+  "name": "testing-with-swimm-io",
+  "version": "1.0.0",
+  "description": "A project for testing with Swimm.io and GitHub API interactions.",
+  "main": "test-app.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0",
+    "start": "node test-app.js",
+    "build:a": "tsc packages/package-a/index.ts",
+    "build:b": "tsc packages/package-b/index.ts",
+    "build:test": "tsc test-app.ts",
+    "build": "npm run build:a && npm run build:b && npm run build:test"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "GitHub",
+    "API",
+    "Swimm.io",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC"
+}
