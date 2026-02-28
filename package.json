@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/buildResortData.js && vite build",
+    "build": "vite build",
+    "build:full": "node scripts/buildResortData.js && vite build",
     "preview": "vite preview",
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest --testEnvironment=node",
     "build-resorts": "node scripts/buildResortData.js"
