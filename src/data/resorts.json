@@ -10,7 +10,8 @@
     "baseElevation": 2623.9,
     "verticalDrop": 231,
     "website": "https://www.leecanyonlv.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "lee-canyon"
   },
   {
     "id": "003fc7a8c53bae5af9b05470f7e6a95002eee00f",
@@ -23,7 +24,8 @@
     "baseElevation": 322.1,
     "verticalDrop": 769,
     "website": "https://goremountain.com/the-mountain/about-the-ski-bowl/",
-    "tier": 1
+    "tier": 1,
+    "slug": "north-creek-ski-bowl"
   },
   {
     "id": "openstreetmap-relation-14322044",
@@ -36,7 +38,8 @@
     "baseElevation": 500.1,
     "verticalDrop": 469,
     "website": "https://www.huntermtn.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "hunter-mountain"
   },
   {
     "id": "openstreetmap-way-1352985922",
@@ -49,7 +52,8 @@
     "baseElevation": 50,
     "verticalDrop": 153,
     "website": "https://www.centrepleinaircap-chat.com/activit%C3%A9s",
-    "tier": 2
+    "tier": 2,
+    "slug": "station-petit-chic-chocs"
   },
   {
     "id": "openstreetmap-way-1362374789",
@@ -62,7 +66,8 @@
     "baseElevation": 1685.1,
     "verticalDrop": 429,
     "website": "https://www.caviahue.com/invierno",
-    "tier": 2
+    "tier": 2,
+    "slug": "caviahue"
   },
   {
     "id": "openstreetmap-way-1201185853",
@@ -75,7 +80,8 @@
     "baseElevation": 1937.8,
     "verticalDrop": 897,
     "website": "https://www.snowbasin.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "snowbasin-resort"
   },
   {
     "id": "03a7236fba75b38111a91dae2c9608fce2a47eaa",
@@ -88,7 +94,8 @@
     "baseElevation": 589.4,
     "verticalDrop": 198,
     "website": "http://www.skismokey.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "smokey-mountain-ski-club"
   },
   {
     "id": "openstreetmap-way-529342856",
@@ -101,7 +108,8 @@
     "baseElevation": 1240.8,
     "verticalDrop": 350,
     "website": "http://www.skisugar.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sugar-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-18792290",
@@ -114,7 +122,8 @@
     "baseElevation": 289.7,
     "verticalDrop": 204,
     "website": "http://fqme.qc.ca/wp-content/uploads/2019/01/FQME_Mont_des_Allemands_2022-23-2048x1448.jpg",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-des-allemands"
   },
   {
     "id": "openstreetmap-way-1278125600",
@@ -127,7 +136,8 @@
     "baseElevation": 337,
     "verticalDrop": 211,
     "website": "https://bousquetmountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "bousquet-mountain"
   },
   {
     "id": "openstreetmap-relation-18792796",
@@ -140,7 +150,8 @@
     "baseElevation": 248.9,
     "verticalDrop": 322,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "fqme-ski-vall-e-bras-du-nord"
   },
   {
     "id": "openstreetmap-way-32644222",
@@ -153,7 +164,8 @@
     "baseElevation": 521.7,
     "verticalDrop": 289,
     "website": "https://www.middleburysnowbowl.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "middlebury-college-snow-bowl"
   },
   {
     "id": "openstreetmap-relation-5881053",
@@ -166,7 +178,8 @@
     "baseElevation": 539.4,
     "verticalDrop": 319,
     "website": "https://www.massresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "massanutten-resort"
   },
   {
     "id": "openstreetmap-way-1096045891",
@@ -179,7 +192,8 @@
     "baseElevation": 601.1,
     "verticalDrop": 387,
     "website": "https://www.bromley.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "bromley-mountain-ski-resort"
   },
   {
     "id": "openstreetmap-relation-5277176",
@@ -192,7 +206,8 @@
     "baseElevation": 2572,
     "verticalDrop": 272,
     "website": "https://whitepinewyoming.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "white-pine-resort"
   },
   {
     "id": "openstreetmap-relation-15317924",
@@ -205,7 +220,8 @@
     "baseElevation": 824.3,
     "verticalDrop": 598,
     "website": "https://cypressmountain.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "cypress-mountain"
   },
   {
     "id": "openstreetmap-relation-5535543",
@@ -218,7 +234,8 @@
     "baseElevation": 1010.1,
     "verticalDrop": 522,
     "website": "https://www.trollskiresort.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "troll-resort"
   },
   {
     "id": "openstreetmap-way-136858703",
@@ -231,7 +248,8 @@
     "baseElevation": 465.6,
     "verticalDrop": 251,
     "website": "https://www.holidayvalley.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "holiday-valley"
   },
   {
     "id": "openstreetmap-relation-5517057",
@@ -244,7 +262,8 @@
     "baseElevation": 892.9,
     "verticalDrop": 509,
     "website": "https://www.murrayridge.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "murray-ridge"
   },
   {
     "id": "openstreetmap-way-1244085914",
@@ -257,7 +276,8 @@
     "baseElevation": 253,
     "verticalDrop": 285,
     "website": "https://skibutternut.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-butternut"
   },
   {
     "id": "openstreetmap-relation-5535639",
@@ -270,7 +290,8 @@
     "baseElevation": 1374.4,
     "verticalDrop": 276,
     "website": "https://www.skitimothy.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-timothy"
   },
   {
     "id": "openstreetmap-way-1236284348",
@@ -283,7 +304,8 @@
     "baseElevation": 351.5,
     "verticalDrop": 655,
     "website": "https://www.okemo.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "okemo-mountain"
   },
   {
     "id": "openstreetmap-way-457771644",
@@ -296,7 +318,8 @@
     "baseElevation": 711.6,
     "verticalDrop": 294,
     "website": "https://plattekill.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "plattekill-mountain-ski-area"
   },
   {
     "id": "openstreetmap-way-256781770",
@@ -309,7 +332,8 @@
     "baseElevation": 180,
     "verticalDrop": 286,
     "website": "https://berkshireeast.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "berkshire-east-ski-resort"
   },
   {
     "id": "openstreetmap-way-1135215380",
@@ -322,7 +346,8 @@
     "baseElevation": 1141.5,
     "verticalDrop": 523,
     "website": "https://hudsonbaymountain.ca/",
-    "tier": 1
+    "tier": 1,
+    "slug": "hudson-bay-mountain"
   },
   {
     "id": "openstreetmap-way-579980733",
@@ -335,7 +360,8 @@
     "baseElevation": 1190.3,
     "verticalDrop": 426,
     "website": "https://www.mountcain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-cain-alpine-park"
   },
   {
     "id": "openstreetmap-way-334089267",
@@ -348,7 +374,8 @@
     "baseElevation": 168.4,
     "verticalDrop": 342,
     "website": "https://www.cranmore.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "cranmore-mountain-resort"
   },
   {
     "id": "openstreetmap-way-1244098768",
@@ -361,7 +388,8 @@
     "baseElevation": 1813.3,
     "verticalDrop": 193,
     "website": "https://www.sunvalley.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sun-valley-dollar-mountain"
   },
   {
     "id": "11ba32469e6e376530ff9e22b165a7799d6fe8da",
@@ -374,7 +402,8 @@
     "baseElevation": 2126.8,
     "verticalDrop": 443,
     "website": "https://www.skimaverick.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "maverick-mountain-ski-area"
   },
   {
     "id": "openstreetmap-relation-10534510",
@@ -387,7 +416,8 @@
     "baseElevation": 2051.9,
     "verticalDrop": 336,
     "website": "https://snow-valley.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "snow-valley-mountain-resort"
   },
   {
     "id": "12534987025b61dc109e69310ec68fd21bd44e40",
@@ -400,7 +430,8 @@
     "baseElevation": 419.8,
     "verticalDrop": 224,
     "website": "https://montadstock.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-adstock"
   },
   {
     "id": "openstreetmap-relation-3185443",
@@ -413,7 +444,8 @@
     "baseElevation": 2855.2,
     "verticalDrop": 472,
     "website": "https://www.sunriseskiparkaz.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sunrise-park-resort"
   },
   {
     "id": "openstreetmap-relation-20111129",
@@ -426,7 +458,8 @@
     "baseElevation": 410.2,
     "verticalDrop": 299,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "touring-refuge-coyote"
   },
   {
     "id": "12fac582d8fc0619fff0cf24aa9f41c2184ffbba",
@@ -439,7 +472,8 @@
     "baseElevation": 211.3,
     "verticalDrop": 156,
     "website": "https://www.whitehillsresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "white-hills"
   },
   {
     "id": "1365413f41db516766793cc9713e603b544d9cfd",
@@ -452,7 +486,8 @@
     "baseElevation": 2889.9,
     "verticalDrop": 376,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "black-mountain-formerly-evergreen-basin-now-private"
   },
   {
     "id": "openstreetmap-way-934098320",
@@ -465,7 +500,8 @@
     "baseElevation": 1261,
     "verticalDrop": 714,
     "website": "http://www.laspendientes.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "chapelco-ski-resort"
   },
   {
     "id": "openstreetmap-way-1358286520",
@@ -478,7 +514,8 @@
     "baseElevation": 952,
     "verticalDrop": 569,
     "website": "https://www.powderking.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "powder-king-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-20111128",
@@ -491,7 +528,8 @@
     "baseElevation": 203.9,
     "verticalDrop": 233,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "hors-piste-mont-shefford-ferm"
   },
   {
     "id": "openstreetmap-way-1233552673",
@@ -504,7 +542,8 @@
     "baseElevation": 377.2,
     "verticalDrop": 235,
     "website": "https://www.sugarloaf.com/the-outdoor-center",
-    "tier": 2
+    "tier": 2,
+    "slug": "sugarloaf-outdoor-center"
   },
   {
     "id": "openstreetmap-relation-16792393",
@@ -517,7 +556,8 @@
     "baseElevation": 2038.2,
     "verticalDrop": 554,
     "website": "https://www.bearvalley.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "bear-valley"
   },
   {
     "id": "openstreetmap-relation-3139919",
@@ -530,7 +570,8 @@
     "baseElevation": 2010.6,
     "verticalDrop": 478,
     "website": "https://www.dodgeridge.com/site/",
-    "tier": 2
+    "tier": 2,
+    "slug": "dodge-ridge-ski-area"
   },
   {
     "id": "openstreetmap-way-390539624",
@@ -543,7 +584,8 @@
     "baseElevation": 236.7,
     "verticalDrop": 171,
     "website": "roundtopmountainresort.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "roundtop-mountain-resort"
   },
   {
     "id": "openstreetmap-way-691521201",
@@ -556,7 +598,8 @@
     "baseElevation": 383,
     "verticalDrop": 254,
     "website": "https://greekpeakmtnresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "greek-peak-mountain-resort"
   },
   {
     "id": "openstreetmap-way-1254864194",
@@ -569,7 +612,8 @@
     "baseElevation": 1367.7,
     "verticalDrop": 623,
     "website": "https://www.skiwhitepass.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "white-pass-ski-area"
   },
   {
     "id": "openstreetmap-way-530531926",
@@ -582,7 +626,8 @@
     "baseElevation": 2472,
     "verticalDrop": 1057,
     "website": "https://www.aspensnowmass.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "aspen-highlands"
   },
   {
     "id": "1831ee26f69e1e486670bfce7b613ced5bdd1715",
@@ -595,7 +640,8 @@
     "baseElevation": 2568.5,
     "verticalDrop": 293,
     "website": "https://www.skiantelopebutte.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "antelope-butte-ski-area"
   },
   {
     "id": "openstreetmap-way-972064114",
@@ -608,7 +654,8 @@
     "baseElevation": 141.6,
     "verticalDrop": 305,
     "website": "https://www.mountaincreek.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mountain-creek"
   },
   {
     "id": "193c019e9513b7876c7c622a01edf19de52b2d9a",
@@ -621,7 +668,8 @@
     "baseElevation": 331.7,
     "verticalDrop": 184,
     "website": "https://www.cerromartial.com.ar/",
-    "tier": 2
+    "tier": 2,
+    "slug": "cerro-martial"
   },
   {
     "id": "openstreetmap-way-530538581",
@@ -634,7 +682,8 @@
     "baseElevation": 2406.4,
     "verticalDrop": 608,
     "website": "https://www.aspensnowmass.com/four-mountains/buttermilk",
-    "tier": 2
+    "tier": 2,
+    "slug": "buttermilk"
   },
   {
     "id": "openstreetmap-way-1010719780",
@@ -647,7 +696,8 @@
     "baseElevation": 1002.3,
     "verticalDrop": 294,
     "website": "https://timberlinemountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "timberline-mountain"
   },
   {
     "id": "openstreetmap-relation-18793168",
@@ -660,7 +710,8 @@
     "baseElevation": 229.9,
     "verticalDrop": 160,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "fqme-air-eau-bois"
   },
   {
     "id": "openstreetmap-relation-3943525",
@@ -673,7 +724,8 @@
     "baseElevation": 873,
     "verticalDrop": 317,
     "website": "https://www.mountsima.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-sima"
   },
   {
     "id": "openstreetmap-way-934046989",
@@ -686,7 +738,8 @@
     "baseElevation": 192.9,
     "verticalDrop": 752,
     "website": "https://www.cerrocastor.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "cerro-castor"
   },
   {
     "id": "openstreetmap-way-1023308077",
@@ -699,7 +752,8 @@
     "baseElevation": 2605.3,
     "verticalDrop": 613,
     "website": "https://www.alta.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "alta-ski-area"
   },
   {
     "id": "openstreetmap-relation-4639999",
@@ -712,7 +766,8 @@
     "baseElevation": 2314.4,
     "verticalDrop": 776,
     "website": "https://www.junemountain.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "june-mountain"
   },
   {
     "id": "openstreetmap-relation-5883752",
@@ -725,7 +780,8 @@
     "baseElevation": 999.1,
     "verticalDrop": 469,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "snowshoe-mountain"
   },
   {
     "id": "openstreetmap-relation-8027590",
@@ -738,7 +794,8 @@
     "baseElevation": 38.5,
     "verticalDrop": 754,
     "website": "https://www.lemassif.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "le-massif"
   },
   {
     "id": "openstreetmap-relation-5552850",
@@ -751,7 +808,8 @@
     "baseElevation": 1264.2,
     "verticalDrop": 220,
     "website": "https://skiphoenix.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "phoenix-mountain"
   },
   {
     "id": "openstreetmap-way-319472357",
@@ -764,7 +822,8 @@
     "baseElevation": 2387.8,
     "verticalDrop": 505,
     "website": "https://www.kirkwood.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "kirkwood-mountain-resort"
   },
   {
     "id": "openstreetmap-way-1388616336",
@@ -777,7 +836,8 @@
     "baseElevation": 1237.3,
     "verticalDrop": 670,
     "website": "https://www.skikimberley.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "kimberley-alpine-resort"
   },
   {
     "id": "openstreetmap-way-68519530",
@@ -790,7 +850,8 @@
     "baseElevation": 274.5,
     "verticalDrop": 183,
     "website": "https://www.mohawkmtn.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mohawk-mountain-ski-area"
   },
   {
     "id": "2301703a1c6ede52c299474292da76643ec9ba38",
@@ -803,7 +864,8 @@
     "baseElevation": 895.9,
     "verticalDrop": 153,
     "website": "https://www.mountaineers.org/locations-lodges/meany-lodge",
-    "tier": 2
+    "tier": 2,
+    "slug": "meany-lodge"
   },
   {
     "id": "openstreetmap-way-251260219",
@@ -816,7 +878,8 @@
     "baseElevation": 593.5,
     "verticalDrop": 618,
     "website": "https://www.skiwildcat.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "wildcat-mountain"
   },
   {
     "id": "openstreetmap-way-1052361696",
@@ -829,7 +892,8 @@
     "baseElevation": 937.3,
     "verticalDrop": 319,
     "website": "https://www.mountseymour.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mt-seymour"
   },
   {
     "id": "openstreetmap-way-1252353163",
@@ -842,7 +906,8 @@
     "baseElevation": 19.3,
     "verticalDrop": 453,
     "website": "https://www.skimarble.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "marble-mountain"
   },
   {
     "id": "openstreetmap-way-1266097009",
@@ -855,7 +920,8 @@
     "baseElevation": 2098.9,
     "verticalDrop": 362,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "utah-olympic-park"
   },
   {
     "id": "openstreetmap-way-1213942855",
@@ -868,7 +934,8 @@
     "baseElevation": 2636.9,
     "verticalDrop": 348,
     "website": "https://www.brushcreekranch.com/green-mountain",
-    "tier": 2
+    "tier": 2,
+    "slug": "green-mountain"
   },
   {
     "id": "openstreetmap-relation-18793077",
@@ -881,7 +948,8 @@
     "baseElevation": 569,
     "verticalDrop": 271,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "montagne-grande-coul-e-parc-des-appalaches"
   },
   {
     "id": "openstreetmap-way-168062360",
@@ -894,7 +962,8 @@
     "baseElevation": 994.4,
     "verticalDrop": 171,
     "website": "https://www.scrd.ca/dakota-ridge",
-    "tier": 2
+    "tier": 2,
+    "slug": "dakota-ridge-recreation-site"
   },
   {
     "id": "openstreetmap-relation-4642894",
@@ -907,7 +976,8 @@
     "baseElevation": 1976.3,
     "verticalDrop": 632,
     "website": "https://www.mtbaldyresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mt-baldy"
   },
   {
     "id": "openstreetmap-way-252782489",
@@ -920,7 +990,8 @@
     "baseElevation": 345.3,
     "verticalDrop": 200,
     "website": "https://www.whaleback.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "whaleback-mountain"
   },
   {
     "id": "openstreetmap-way-952802401",
@@ -933,7 +1004,8 @@
     "baseElevation": 2320.9,
     "verticalDrop": 682,
     "website": "https://www.grandtarghee.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "grand-targhee-resort"
   },
   {
     "id": "openstreetmap-way-1010412985",
@@ -946,7 +1018,8 @@
     "baseElevation": 352.7,
     "verticalDrop": 437,
     "website": "https://skieaglecrest.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "eaglecrest-ski-area"
   },
   {
     "id": "openstreetmap-way-379478843",
@@ -959,7 +1032,8 @@
     "baseElevation": 400.8,
     "verticalDrop": 175,
     "website": "https://skibigmoose.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "big-moose-mountain-ski-area"
   },
   {
     "id": "openstreetmap-way-1361868120",
@@ -972,7 +1046,8 @@
     "baseElevation": 797,
     "verticalDrop": 378,
     "website": "https://www.summitatsnoqualmie.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "three-summits"
   },
   {
     "id": "openstreetmap-way-1282431650",
@@ -985,7 +1060,8 @@
     "baseElevation": 810.7,
     "verticalDrop": 172,
     "website": "https://obermountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ober-mountain"
   },
   {
     "id": "openstreetmap-relation-4080466",
@@ -998,7 +1074,8 @@
     "baseElevation": 1217.2,
     "verticalDrop": 262,
     "website": "https://www.fairmonthotsprings.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "fairmont-hot-springs"
   },
   {
     "id": "openstreetmap-way-908556051",
@@ -1011,7 +1088,8 @@
     "baseElevation": 2028.6,
     "verticalDrop": 239,
     "website": "https://www.skisg.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sleeping-giant-winter-sports-area"
   },
   {
     "id": "2e1416d16c26d3c15a3814bb3d22b8bf5b721076",
@@ -1024,7 +1102,8 @@
     "baseElevation": 975.2,
     "verticalDrop": 317,
     "website": "https://www.instagram.com/cerroelfraile/?hl=es",
-    "tier": 2
+    "tier": 2,
+    "slug": "cerro-el-fraile"
   },
   {
     "id": "openstreetmap-way-476840539",
@@ -1037,7 +1116,8 @@
     "baseElevation": 1146,
     "verticalDrop": 741,
     "website": "https://www.skisilverstar.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "silver-star-mountain-resort"
   },
   {
     "id": "openstreetmap-way-871519195",
@@ -1050,7 +1130,8 @@
     "baseElevation": 1561.4,
     "verticalDrop": 194,
     "website": "https://www.skifergi.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ferguson-ridge-ski-area"
   },
   {
     "id": "openstreetmap-way-1264696900",
@@ -1063,7 +1144,8 @@
     "baseElevation": 222.7,
     "verticalDrop": 195,
     "website": "https://www.michigan.gov/skitheporkies",
-    "tier": 2
+    "tier": 2,
+    "slug": "porcupine-mountains-winter-sports-complex"
   },
   {
     "id": "openstreetmap-way-528965906",
@@ -1076,7 +1158,8 @@
     "baseElevation": 2666,
     "verticalDrop": 1147,
     "website": "https://tellurideskiresort.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "telluride-ski-area"
   },
   {
     "id": "openstreetmap-way-1213962705",
@@ -1089,7 +1172,8 @@
     "baseElevation": 1704.1,
     "verticalDrop": 229,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "blizzard-mountain"
   },
   {
     "id": "openstreetmap-way-531009608",
@@ -1102,7 +1186,8 @@
     "baseElevation": 2261.7,
     "verticalDrop": 1226,
     "website": "https://www.beavercreek.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "beaver-creek"
   },
   {
     "id": "openstreetmap-way-938362715",
@@ -1115,7 +1200,8 @@
     "baseElevation": 207.4,
     "verticalDrop": 396,
     "website": "https://shredthemoose.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "moose-mountain-ski-resort"
   },
   {
     "id": "openstreetmap-way-400693105",
@@ -1128,7 +1214,8 @@
     "baseElevation": 87.7,
     "verticalDrop": 195,
     "website": "https://www.poleymountain.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "poley-mountain-ski-area"
   },
   {
     "id": "openstreetmap-relation-4651545",
@@ -1141,7 +1228,8 @@
     "baseElevation": 2061.5,
     "verticalDrop": 537,
     "website": "https://www.diamondpeak.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "diamond-peak"
   },
   {
     "id": "openstreetmap-way-1335348646",
@@ -1154,7 +1242,8 @@
     "baseElevation": 1515.3,
     "verticalDrop": 781,
     "website": "https://www.montanasnowbowl.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "montana-snowbowl"
   },
   {
     "id": "openstreetmap-way-1213960940",
@@ -1167,7 +1256,8 @@
     "baseElevation": 2353,
     "verticalDrop": 284,
     "website": "https://www.pomerelle-mtn.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "pomerelle-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-6559485",
@@ -1180,7 +1270,8 @@
     "baseElevation": 2590.2,
     "verticalDrop": 890,
     "website": "https://www.elcolorado.cl/",
-    "tier": 1
+    "tier": 1,
+    "slug": "el-colorado"
   },
   {
     "id": "openstreetmap-relation-10672845",
@@ -1193,7 +1284,8 @@
     "baseElevation": 179.8,
     "verticalDrop": 448,
     "website": "https://www.montedouard.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "station-de-ski-mont-douard"
   },
   {
     "id": "36a712b1c210e248c2290923d2c5a81c65c33d47",
@@ -1206,7 +1298,8 @@
     "baseElevation": 39.6,
     "verticalDrop": 159,
     "website": "https://parcsugarloafpark.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sugarloaf-provincial-park"
   },
   {
     "id": "37565f20ad2667fa7a65193502b6500b3773ddaf",
@@ -1219,7 +1312,8 @@
     "baseElevation": 814.9,
     "verticalDrop": 151,
     "website": "https://canyonski.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "canyon-ski-resort-ski-red-deer"
   },
   {
     "id": "openstreetmap-way-905237707",
@@ -1232,7 +1326,8 @@
     "baseElevation": 477.9,
     "verticalDrop": 471,
     "website": "https://www.boltonvalley.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "bolton-valley-resort"
   },
   {
     "id": "openstreetmap-way-452295412",
@@ -1245,7 +1340,8 @@
     "baseElevation": 415.8,
     "verticalDrop": 451,
     "website": "https://www.magicmtn.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "magic-mountain-ski-area"
   },
   {
     "id": "openstreetmap-way-682230006",
@@ -1258,7 +1354,8 @@
     "baseElevation": 2444.8,
     "verticalDrop": 601,
     "website": "https://solitudemountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "solitude-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-9963336",
@@ -1271,7 +1368,8 @@
     "baseElevation": 2039.5,
     "verticalDrop": 662,
     "website": "https://www.sierraattahoe.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sierra-at-tahoe-ski-resort"
   },
   {
     "id": "openstreetmap-way-1278124828",
@@ -1284,7 +1382,8 @@
     "baseElevation": 1565.1,
     "verticalDrop": 470,
     "website": "https://www.willamettepass.ski/",
-    "tier": 2
+    "tier": 2,
+    "slug": "willamette-pass"
   },
   {
     "id": "openstreetmap-relation-5366030",
@@ -1297,7 +1396,8 @@
     "baseElevation": 207.4,
     "verticalDrop": 165,
     "website": "https://www.monthabitant.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-habitant"
   },
   {
     "id": "3a3af322348d9ad048ac77007783c289d890afee",
@@ -1310,7 +1410,8 @@
     "baseElevation": 441.2,
     "verticalDrop": 350,
     "website": "https://www.valinouet.qc.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "le-valinouet"
   },
   {
     "id": "openstreetmap-way-1256292826",
@@ -1323,7 +1424,8 @@
     "baseElevation": 1887.6,
     "verticalDrop": 273,
     "website": "https://www.skitetonmt.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "teton-pass-ski-resort"
   },
   {
     "id": "openstreetmap-way-1263733813",
@@ -1336,7 +1438,8 @@
     "baseElevation": 1185.5,
     "verticalDrop": 598,
     "website": "https://www.mtspokane.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mt-spokane"
   },
   {
     "id": "3bfba563448aad28047f13757c254c0c2fe05216",
@@ -1349,7 +1452,8 @@
     "baseElevation": 405.2,
     "verticalDrop": 164,
     "website": "https://www.swain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "swain-ski-snowboard-resort"
   },
   {
     "id": "openstreetmap-way-496731548",
@@ -1362,7 +1466,8 @@
     "baseElevation": 236.6,
     "verticalDrop": 216,
     "website": "https://www.craigleith.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "craigleith-ski-club"
   },
   {
     "id": "openstreetmap-relation-7095958",
@@ -1375,7 +1480,8 @@
     "baseElevation": 1927.2,
     "verticalDrop": 702,
     "website": "https://www.northstarcalifornia.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "northstar-at-tahoe-resort"
   },
   {
     "id": "openstreetmap-way-530530657",
@@ -1388,7 +1494,8 @@
     "baseElevation": 2484.5,
     "verticalDrop": 521,
     "website": "https://www.sunlightmtn.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sunlight-mountain-resort"
   },
   {
     "id": "openstreetmap-way-1094586461",
@@ -1401,7 +1508,8 @@
     "baseElevation": 613.2,
     "verticalDrop": 590,
     "website": "https://www.picomountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "pico-mountain-resort"
   },
   {
     "id": "openstreetmap-way-1363368307",
@@ -1414,7 +1522,8 @@
     "baseElevation": 395.1,
     "verticalDrop": 307,
     "website": "https://camelshumpskiers.org/",
-    "tier": 2
+    "tier": 2,
+    "slug": "camels-hump-nordic-ski-area"
   },
   {
     "id": "openstreetmap-relation-6559484",
@@ -1427,7 +1536,8 @@
     "baseElevation": 2340.1,
     "verticalDrop": 284,
     "website": "https://centrofarellones.cl/",
-    "tier": 2
+    "tier": 2,
+    "slug": "farellones"
   },
   {
     "id": "openstreetmap-way-255071260",
@@ -1440,7 +1550,8 @@
     "baseElevation": 202.9,
     "verticalDrop": 285,
     "website": "https://www.bigrockmaine.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "big-rock-mountain"
   },
   {
     "id": "409b885203e5c9953133b455455a451def7315d6",
@@ -1453,7 +1564,8 @@
     "baseElevation": 724.8,
     "verticalDrop": 193,
     "website": "http://www.watsonlakeskiclub.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-maichen-watson-lake"
   },
   {
     "id": "openstreetmap-way-923545035",
@@ -1466,7 +1578,8 @@
     "baseElevation": 1144.4,
     "verticalDrop": 198,
     "website": "https://skibaldmountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "bald-mountain-ski-area"
   },
   {
     "id": "openstreetmap-way-390167295",
@@ -1479,7 +1592,8 @@
     "baseElevation": 398.9,
     "verticalDrop": 151,
     "website": "http://www.eaglerockresort.com/leisure-activities/ski/",
-    "tier": 2
+    "tier": 2,
+    "slug": "eagle-rock-ski-resort"
   },
   {
     "id": "openstreetmap-way-489821517",
@@ -1492,7 +1606,8 @@
     "baseElevation": 1934.7,
     "verticalDrop": 192,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "snobowl-bike-and-ski-area"
   },
   {
     "id": "openstreetmap-relation-3169070",
@@ -1505,7 +1620,8 @@
     "baseElevation": 2212,
     "verticalDrop": 174,
     "website": "http://www.yosemitepark.com/badgerpass.aspx",
-    "tier": 2
+    "tier": 2,
+    "slug": "badger-pass-ski-area"
   },
   {
     "id": "463c0304caf075d147ea19abffc42902ba99b02e",
@@ -1518,7 +1634,8 @@
     "baseElevation": 517.4,
     "verticalDrop": 380,
     "website": "https://massifdusud.net/",
-    "tier": 2
+    "tier": 2,
+    "slug": "massif-du-sud"
   },
   {
     "id": "4650ad257e48137cc49b378e2a14b4b16244f7d0",
@@ -1531,7 +1648,8 @@
     "baseElevation": 1527.9,
     "verticalDrop": 874,
     "website": null,
-    "tier": 1
+    "tier": 1,
+    "slug": "valle-hermoso"
   },
   {
     "id": "openstreetmap-way-934101794",
@@ -1544,7 +1662,8 @@
     "baseElevation": 1194.2,
     "verticalDrop": 454,
     "website": "https://centrovolcanosorno.cl/",
-    "tier": 2
+    "tier": 2,
+    "slug": "volc-n-osorno"
   },
   {
     "id": "openstreetmap-way-1290903952",
@@ -1557,7 +1676,8 @@
     "baseElevation": 1959.8,
     "verticalDrop": 534,
     "website": "https://losttrail.com/trail-map/",
-    "tier": 2
+    "tier": 2,
+    "slug": "lost-trail"
   },
   {
     "id": "openstreetmap-way-1228623824",
@@ -1570,7 +1690,8 @@
     "baseElevation": 156.9,
     "verticalDrop": 378,
     "website": "https://www.pleasantmountain.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "pleasant-mountain"
   },
   {
     "id": "openstreetmap-way-1213945638",
@@ -1583,7 +1704,8 @@
     "baseElevation": 3163.6,
     "verticalDrop": 169,
     "website": "https://beartoothbasin.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "beartooth-basin-summer-ski-area"
   },
   {
     "id": "openstreetmap-way-534160668",
@@ -1596,7 +1718,8 @@
     "baseElevation": 2420.7,
     "verticalDrop": 492,
     "website": "https://skirose.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-rose-ski-tahoe"
   },
   {
     "id": "openstreetmap-way-530998534",
@@ -1609,7 +1732,8 @@
     "baseElevation": 3072.6,
     "verticalDrop": 179,
     "website": "https://echomntn.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "echo-mountain"
   },
   {
     "id": "openstreetmap-relation-14773786",
@@ -1622,7 +1746,8 @@
     "baseElevation": 1627.1,
     "verticalDrop": 526,
     "website": "https://nordicvalley.ski/",
-    "tier": 2
+    "tier": 2,
+    "slug": "nordic-valley-resort"
   },
   {
     "id": "49d77e1e8cc23e09186ac9d00002c7c6e9a09fbd",
@@ -1635,7 +1760,8 @@
     "baseElevation": 234.9,
     "verticalDrop": 169,
     "website": "https://www.mtashwabay.org/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-ashwabay"
   },
   {
     "id": "openstreetmap-way-255571392",
@@ -1648,7 +1774,8 @@
     "baseElevation": 655.6,
     "verticalDrop": 565,
     "website": "https://www.saddlebackmaine.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "saddleback-mountain"
   },
   {
     "id": "openstreetmap-way-1094522661",
@@ -1661,7 +1788,8 @@
     "baseElevation": 559.3,
     "verticalDrop": 601,
     "website": "https://jaypeakresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "jay-peak-resort"
   },
   {
     "id": "openstreetmap-way-531009606",
@@ -1674,7 +1802,8 @@
     "baseElevation": 3234.4,
     "verticalDrop": 350,
     "website": "https://www.skicooper.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-cooper"
   },
   {
     "id": "openstreetmap-way-934291345",
@@ -1687,7 +1816,8 @@
     "baseElevation": 2585,
     "verticalDrop": 625,
     "website": "https://www.instagram.com/penitentespark/?hl=es",
-    "tier": 1
+    "tier": 1,
+    "slug": "los-penitentes"
   },
   {
     "id": "openstreetmap-relation-4458755",
@@ -1700,7 +1830,8 @@
     "baseElevation": 314,
     "verticalDrop": 286,
     "website": "https://www.wachusett.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "wachusett-mountain-ski-area"
   },
   {
     "id": "openstreetmap-way-1023791593",
@@ -1713,7 +1844,8 @@
     "baseElevation": 764.4,
     "verticalDrop": 301,
     "website": "https://www.wintergreenresort.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "wintergreen-ski-resort"
   },
   {
     "id": "openstreetmap-way-476836855",
@@ -1726,7 +1858,8 @@
     "baseElevation": 1513.5,
     "verticalDrop": 757,
     "website": "https://www.bigwhite.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "big-white-ski-resort"
   },
   {
     "id": "openstreetmap-way-766056081",
@@ -1739,7 +1872,8 @@
     "baseElevation": 1410,
     "verticalDrop": 850,
     "website": "https://www.skicastle.ca",
-    "tier": 1
+    "tier": 1,
+    "slug": "castle-mountain-resort"
   },
   {
     "id": "openstreetmap-way-1079509686",
@@ -1752,7 +1886,8 @@
     "baseElevation": 586,
     "verticalDrop": 187,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "cortina-valley"
   },
   {
     "id": "openstreetmap-way-1107767240",
@@ -1765,7 +1900,8 @@
     "baseElevation": 551.7,
     "verticalDrop": 423,
     "website": "http://hermitageclub.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "the-hermitage-club-at-haystack-mountain"
   },
   {
     "id": "openstreetmap-way-1388302700",
@@ -1778,7 +1914,8 @@
     "baseElevation": 1051,
     "verticalDrop": 478,
     "website": "https://antillanca.cl/",
-    "tier": 2
+    "tier": 2,
+    "slug": "estaci-n-esqu-antillanca"
   },
   {
     "id": "openstreetmap-relation-19108017",
@@ -1791,7 +1928,8 @@
     "baseElevation": 1109.1,
     "verticalDrop": 445,
     "website": "https://www.mtbaker.us/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mt-baker"
   },
   {
     "id": "openstreetmap-relation-18791137",
@@ -1804,7 +1942,8 @@
     "baseElevation": 721.5,
     "verticalDrop": 174,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-eldorado-secteur-st-paul"
   },
   {
     "id": "openstreetmap-way-934285904",
@@ -1817,7 +1956,8 @@
     "baseElevation": 2582.8,
     "verticalDrop": 768,
     "website": "https://skiportillo.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "portillo"
   },
   {
     "id": "openstreetmap-way-1388611703",
@@ -1830,7 +1970,8 @@
     "baseElevation": 1647.5,
     "verticalDrop": 995,
     "website": "https://www.skilouise.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "lake-louise-ski-area"
   },
   {
     "id": "openstreetmap-relation-12152028",
@@ -1843,7 +1984,8 @@
     "baseElevation": 2027,
     "verticalDrop": 1010,
     "website": null,
-    "tier": 1
+    "tier": 1,
+    "slug": "heavenly-mountain-resort"
   },
   {
     "id": "openstreetmap-way-1135735100",
@@ -1856,7 +1998,8 @@
     "baseElevation": 553.2,
     "verticalDrop": 738,
     "website": "https://skilarchhills.ca/",
-    "tier": 1
+    "tier": 1,
+    "slug": "larch-hills-nordic-ski-trails"
   },
   {
     "id": "53e53514bfff26fadea07a576a0481cc6a7d65a9",
@@ -1869,7 +2012,8 @@
     "baseElevation": 122.1,
     "verticalDrop": 223,
     "website": "https://www.montstmathieu.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-saint-mathieu"
   },
   {
     "id": "openstreetmap-way-1263732068",
@@ -1882,7 +2026,8 @@
     "baseElevation": 1275.4,
     "verticalDrop": 623,
     "website": "https://www.silvermt.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "silver-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-10817722",
@@ -1895,7 +2040,8 @@
     "baseElevation": 249.8,
     "verticalDrop": 704,
     "website": "https://www.sundayriver.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "sunday-river"
   },
   {
     "id": "openstreetmap-relation-4642556",
@@ -1908,7 +2054,8 @@
     "baseElevation": 2127.8,
     "verticalDrop": 370,
     "website": "https://www.bigbearmountainresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "snow-summit"
   },
   {
     "id": "openstreetmap-relation-3917252",
@@ -1921,7 +2068,8 @@
     "baseElevation": 2861.8,
     "verticalDrop": 817,
     "website": "https://www.vallenevado.com/index.php",
-    "tier": 1
+    "tier": 1,
+    "slug": "valle-nevado"
   },
   {
     "id": "5607953fc5bf8d8ddc442c8e29d724e9f5d5797e",
@@ -1934,7 +2082,8 @@
     "baseElevation": 248.2,
     "verticalDrop": 418,
     "website": "https://www.sepaq.com/pq/jac/information.dot",
-    "tier": 2
+    "tier": 2,
+    "slug": "parc-national-de-la-jacques-cartier"
   },
   {
     "id": "openstreetmap-relation-3185666",
@@ -1947,7 +2096,8 @@
     "baseElevation": 2129.9,
     "verticalDrop": 305,
     "website": "http://www.mtwaterman.org/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-waterman"
   },
   {
     "id": "openstreetmap-way-1470435942",
@@ -1960,7 +2110,8 @@
     "baseElevation": 1763,
     "verticalDrop": 421,
     "website": "https://soldiermountain.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "soldier-mountain-ski-area"
   },
   {
     "id": "openstreetmap-way-691521199",
@@ -1973,7 +2124,8 @@
     "baseElevation": 361.2,
     "verticalDrop": 209,
     "website": "http://labradormtn.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "labrador-mountain"
   },
   {
     "id": "openstreetmap-relation-5432030",
@@ -1986,7 +2138,8 @@
     "baseElevation": 252.3,
     "verticalDrop": 177,
     "website": "https://www.lochlomond.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "loch-lomond"
   },
   {
     "id": "openstreetmap-relation-18792289",
@@ -1999,7 +2152,8 @@
     "baseElevation": 260.9,
     "verticalDrop": 238,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "fqme-bois-charlevoix"
   },
   {
     "id": "openstreetmap-way-1470441271",
@@ -2012,7 +2166,8 @@
     "baseElevation": 1761,
     "verticalDrop": 537,
     "website": "https://bogusbasin.org",
-    "tier": 2
+    "tier": 2,
+    "slug": "bogus-basin-mountain-recreation-area"
   },
   {
     "id": "openstreetmap-way-1029880737",
@@ -2025,7 +2180,8 @@
     "baseElevation": 397.1,
     "verticalDrop": 327,
     "website": "https://www.montgrandfonds.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-grand-fonds"
   },
   {
     "id": "openstreetmap-relation-18484946",
@@ -2038,7 +2194,8 @@
     "baseElevation": 425.2,
     "verticalDrop": 843,
     "website": "https://www.sugarloaf.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "sugarloaf"
   },
   {
     "id": "openstreetmap-way-1266097397",
@@ -2051,7 +2208,8 @@
     "baseElevation": 2544.1,
     "verticalDrop": 254,
     "website": "https://granbyranch.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "granby-ranch"
   },
   {
     "id": "openstreetmap-way-266484152",
@@ -2064,7 +2222,8 @@
     "baseElevation": 1236.6,
     "verticalDrop": 373,
     "website": "https://skitheloup.org/",
-    "tier": 2
+    "tier": 2,
+    "slug": "loup-loup-ski-bowl"
   },
   {
     "id": "openstreetmap-way-1200712921",
@@ -2077,7 +2236,8 @@
     "baseElevation": 269.3,
     "verticalDrop": 165,
     "website": "http://winter4kids.org",
-    "tier": 2
+    "tier": 2,
+    "slug": "national-winter-activity-center"
   },
   {
     "id": "openstreetmap-relation-15657511",
@@ -2090,7 +2250,8 @@
     "baseElevation": 1402,
     "verticalDrop": 662,
     "website": "https://missionridge.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "mission-ridge"
   },
   {
     "id": "openstreetmap-way-1230198090",
@@ -2103,7 +2264,8 @@
     "baseElevation": 228,
     "verticalDrop": 426,
     "website": "https://www.skitenney.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "tenney-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-4646922",
@@ -2116,7 +2278,8 @@
     "baseElevation": 2736.3,
     "verticalDrop": 445,
     "website": "https://www.pajarito.ski/",
-    "tier": 2
+    "tier": 2,
+    "slug": "pajarito-mountain"
   },
   {
     "id": "openstreetmap-relation-18019724",
@@ -2129,7 +2292,8 @@
     "baseElevation": 217.2,
     "verticalDrop": 170,
     "website": "https://spiritmt.com/winter",
-    "tier": 2
+    "tier": 2,
+    "slug": "spirit-mountain"
   },
   {
     "id": "openstreetmap-relation-15475391",
@@ -2142,7 +2306,8 @@
     "baseElevation": 278.6,
     "verticalDrop": 304,
     "website": "http://skiway.dartmouth.edu/",
-    "tier": 2
+    "tier": 2,
+    "slug": "dartmouth-skiway"
   },
   {
     "id": "openstreetmap-relation-4080380",
@@ -2155,7 +2320,8 @@
     "baseElevation": 1500,
     "verticalDrop": 763,
     "website": "https://www.skinakiska.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "nakiska"
   },
   {
     "id": "openstreetmap-way-1133684734",
@@ -2168,7 +2334,8 @@
     "baseElevation": 873,
     "verticalDrop": 317,
     "website": "https://www.mountsima.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-sima-yukon"
   },
   {
     "id": "openstreetmap-way-1151090250",
@@ -2181,7 +2348,8 @@
     "baseElevation": 1747.9,
     "verticalDrop": 229,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "warner-canyon-ski-area"
   },
   {
     "id": "openstreetmap-way-933399437",
@@ -2194,7 +2362,8 @@
     "baseElevation": 140,
     "verticalDrop": 164,
     "website": "https://wainwright.armymwr.com/programs/birch-hill-ski-snowboard-area",
-    "tier": 2
+    "tier": 2,
+    "slug": "birch-hill-ski-and-snowboard-area"
   },
   {
     "id": "64ab5a74036ff411e69e20b72e3eace01f7daec5",
@@ -2207,7 +2376,8 @@
     "baseElevation": 398.7,
     "verticalDrop": 452,
     "website": "https://www.montsutton.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-sutton"
   },
   {
     "id": "openstreetmap-way-1138569632",
@@ -2220,7 +2390,8 @@
     "baseElevation": 1605,
     "verticalDrop": 569,
     "website": "https://apexresort.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "apex-mountain-resort"
   },
   {
     "id": "openstreetmap-way-256580493",
@@ -2233,7 +2404,8 @@
     "baseElevation": 687.7,
     "verticalDrop": 225,
     "website": "https://www.7springs.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "seven-springs-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-5886629",
@@ -2246,7 +2418,8 @@
     "baseElevation": 1362.7,
     "verticalDrop": 224,
     "website": "https://cataloochee.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "cataloochee-ski-area"
   },
   {
     "id": "openstreetmap-relation-10517367",
@@ -2259,7 +2432,8 @@
     "baseElevation": 771.7,
     "verticalDrop": 424,
     "website": "https://arcticvalley.org/",
-    "tier": 2
+    "tier": 2,
+    "slug": "arctic-valley-ski-area"
   },
   {
     "id": "672fd3098f3ede6512f2d7709d613ea215e42779",
@@ -2272,7 +2446,8 @@
     "baseElevation": 1392.9,
     "verticalDrop": 507,
     "website": "https://www.skiantuco.cl/sitio/",
-    "tier": 2
+    "tier": 2,
+    "slug": "antuco"
   },
   {
     "id": "openstreetmap-way-1363000015",
@@ -2285,7 +2460,8 @@
     "baseElevation": 708.5,
     "verticalDrop": 448,
     "website": "http://www.shamesmountain.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "shames-mountain"
   },
   {
     "id": "openstreetmap-way-1160901671",
@@ -2298,7 +2474,8 @@
     "baseElevation": 312,
     "verticalDrop": 203,
     "website": "https://www.valsaintcome.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "centre-d-excellence-acrobatique-de-val-saint-c-me"
   },
   {
     "id": "openstreetmap-way-397906931",
@@ -2311,7 +2488,8 @@
     "baseElevation": 247.7,
     "verticalDrop": 193,
     "website": "https://www.sommets.com/fr/discover-les-sommets/sommet-olympia/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sommet-olympia"
   },
   {
     "id": "openstreetmap-way-47798396",
@@ -2324,7 +2502,8 @@
     "baseElevation": 288,
     "verticalDrop": 391,
     "website": "https://www.gunstock.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "gunstock-recreation-area"
   },
   {
     "id": "6b28732267e82511af9e51adbc54c4ad77361dde",
@@ -2337,7 +2516,8 @@
     "baseElevation": 1260.5,
     "verticalDrop": 245,
     "website": "https://www.castlegarnordic.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "paulson-x-c-castlegar-nordic"
   },
   {
     "id": "6b6c3d07e13d101df69fb3d31fab9dccc9466e6f",
@@ -2350,7 +2530,8 @@
     "baseElevation": 23.4,
     "verticalDrop": 171,
     "website": "https://www.montbelu.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-b-lu"
   },
   {
     "id": "openstreetmap-relation-3185906",
@@ -2363,7 +2544,8 @@
     "baseElevation": 2069.8,
     "verticalDrop": 159,
     "website": "https://www.skisodasprings.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "soda-springs"
   },
   {
     "id": "openstreetmap-relation-20111042",
@@ -2376,7 +2558,8 @@
     "baseElevation": 28.2,
     "verticalDrop": 253,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "fqme"
   },
   {
     "id": "openstreetmap-relation-4075272",
@@ -2389,7 +2572,8 @@
     "baseElevation": 148.8,
     "verticalDrop": 238,
     "website": "https://www.crabbemountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "crabbe-mountain"
   },
   {
     "id": "openstreetmap-way-1254863688",
@@ -2402,7 +2586,8 @@
     "baseElevation": 2080.4,
     "verticalDrop": 1320,
     "website": "https://bigskyresort.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "big-sky-resort"
   },
   {
     "id": "openstreetmap-relation-5365787",
@@ -2415,7 +2600,8 @@
     "baseElevation": 361.1,
     "verticalDrop": 238,
     "website": "https://www.montorignal.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-orignal"
   },
   {
     "id": "openstreetmap-way-1236288779",
@@ -2428,7 +2614,8 @@
     "baseElevation": 146.6,
     "verticalDrop": 171,
     "website": "https://skisundown.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-sundown"
   },
   {
     "id": "openstreetmap-way-256455529",
@@ -2441,7 +2628,8 @@
     "baseElevation": 132.4,
     "verticalDrop": 303,
     "website": "https://westmountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "west-mountain-ski-resort"
   },
   {
     "id": "6f0d259391e932058ee2965b23cbc3a470954c28",
@@ -2454,7 +2642,8 @@
     "baseElevation": 1481.2,
     "verticalDrop": 430,
     "website": "https://skiaraucarias.cl/el-centro/",
-    "tier": 2
+    "tier": 2,
+    "slug": "las-araucarias-formerly-llaima"
   },
   {
     "id": "openstreetmap-way-1225427361",
@@ -2467,7 +2656,8 @@
     "baseElevation": 1375.3,
     "verticalDrop": 503,
     "website": "https://skilookout.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "lookout-pass"
   },
   {
     "id": "openstreetmap-relation-13532755",
@@ -2480,7 +2670,8 @@
     "baseElevation": 175.3,
     "verticalDrop": 170,
     "website": "https://www.libertymountainresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "liberty-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-18511194",
@@ -2493,7 +2684,8 @@
     "baseElevation": 322.4,
     "verticalDrop": 267,
     "website": "https://www.crotchedmtn.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "crotched-mountain-ski-ride"
   },
   {
     "id": "openstreetmap-way-387976209",
@@ -2506,7 +2698,8 @@
     "baseElevation": 176.9,
     "verticalDrop": 181,
     "website": "https://campfortune.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "camp-fortune"
   },
   {
     "id": "openstreetmap-way-530531925",
@@ -2519,7 +2712,8 @@
     "baseElevation": 2429.2,
     "verticalDrop": 1008,
     "website": "https://www.aspensnowmass.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "aspen-mountain"
   },
   {
     "id": "openstreetmap-relation-18792739",
@@ -2532,7 +2726,8 @@
     "baseElevation": 401.5,
     "verticalDrop": 155,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "parc-r-gional-de-la-for-t-ouareau-secteur-grande-ourse"
   },
   {
     "id": "openstreetmap-way-390163427",
@@ -2545,7 +2740,8 @@
     "baseElevation": 450,
     "verticalDrop": 151,
     "website": "https://jfbb.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "jack-frost-mountain-resort"
   },
   {
     "id": "70ae43b6ab531194798fa3b6748013765a897e38",
@@ -2558,7 +2754,8 @@
     "baseElevation": 1520,
     "verticalDrop": 260,
     "website": "https://www.bearpawskibowl.org/",
-    "tier": 2
+    "tier": 2,
+    "slug": "bear-paw-ski-bowl"
   },
   {
     "id": "openstreetmap-relation-5671444",
@@ -2571,7 +2768,8 @@
     "baseElevation": 2844.8,
     "verticalDrop": 376,
     "website": "https://www.eaglepointresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "eagle-point"
   },
   {
     "id": "731b190c7e831487206434da57340092939b5d31",
@@ -2584,7 +2782,8 @@
     "baseElevation": 1475.6,
     "verticalDrop": 181,
     "website": "https://hurricaneridge.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "hurricane-ridge"
   },
   {
     "id": "openstreetmap-way-767347917",
@@ -2597,7 +2796,8 @@
     "baseElevation": 1471.6,
     "verticalDrop": 198,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "cottonwood-butte-ski-hill"
   },
   {
     "id": "openstreetmap-way-428125408",
@@ -2610,7 +2810,8 @@
     "baseElevation": 373.5,
     "verticalDrop": 956,
     "website": "https://www.whiteface.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "whiteface-mountain-ski-center"
   },
   {
     "id": "openstreetmap-way-1388583977",
@@ -2623,7 +2824,8 @@
     "baseElevation": 1225.8,
     "verticalDrop": 720,
     "website": "https://www.schweitzer.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "schweitzer-mountain-resort"
   },
   {
     "id": "openstreetmap-way-531005986",
@@ -2636,7 +2838,8 @@
     "baseElevation": 2964.5,
     "verticalDrop": 798,
     "website": "https://www.coppercolorado.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "copper-mountain"
   },
   {
     "id": "openstreetmap-relation-18634616",
@@ -2649,7 +2852,8 @@
     "baseElevation": 3023,
     "verticalDrop": 220,
     "website": "https://www.coloradoskihistory.com/lost/dutchhenri.html",
-    "tier": 2
+    "tier": 2,
+    "slug": "leadville-town-trails"
   },
   {
     "id": "openstreetmap-way-826310580",
@@ -2662,7 +2866,8 @@
     "baseElevation": 2174.9,
     "verticalDrop": 241,
     "website": "https://anthonylakes.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "anthony-lakes-mountain-resort"
   },
   {
     "id": "openstreetmap-way-1367311040",
@@ -2675,7 +2880,8 @@
     "baseElevation": 606,
     "verticalDrop": 572,
     "website": "https://www.stratton.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "stratton-mountain-resort"
   },
   {
     "id": "openstreetmap-way-1335354188",
@@ -2688,7 +2894,8 @@
     "baseElevation": 1598.8,
     "verticalDrop": 430,
     "website": "https://blacktailmountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "blacktail-mountain-ski-area"
   },
   {
     "id": "openstreetmap-way-1223350355",
@@ -2701,7 +2908,8 @@
     "baseElevation": 140.1,
     "verticalDrop": 205,
     "website": "https://www.shawneemt.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "shawnee-mountain"
   },
   {
     "id": "openstreetmap-way-1132263707",
@@ -2714,7 +2922,8 @@
     "baseElevation": 1361.2,
     "verticalDrop": 431,
     "website": "https://www.manningpark.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "manning-park-resort"
   },
   {
     "id": "openstreetmap-relation-5365963",
@@ -2727,7 +2936,8 @@
     "baseElevation": 199.1,
     "verticalDrop": 212,
     "website": "https://glissade.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sommet-saint-sauveur"
   },
   {
     "id": "openstreetmap-relation-5291671",
@@ -2740,7 +2950,8 @@
     "baseElevation": 102.9,
     "verticalDrop": 174,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "val-neigette"
   },
   {
     "id": "openstreetmap-relation-4642684",
@@ -2753,7 +2964,8 @@
     "baseElevation": 2181.5,
     "verticalDrop": 497,
     "website": "https://www.bigbearmountainresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "bear-mountain"
   },
   {
     "id": "openstreetmap-way-1388612283",
@@ -2766,7 +2978,8 @@
     "baseElevation": 1062.4,
     "verticalDrop": 1035,
     "website": "https://www.skifernie.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "fernie-alpine-resort"
   },
   {
     "id": "7a4249daf7e73ea36e970f2f63ec38e59d25f5a0",
@@ -2779,7 +2992,8 @@
     "baseElevation": 2099.5,
     "verticalDrop": 410,
     "website": "https://www.pinecreekskiresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "pine-creek-ski-area"
   },
   {
     "id": "openstreetmap-way-1244097962",
@@ -2792,7 +3006,8 @@
     "baseElevation": 184,
     "verticalDrop": 365,
     "website": "https://www.bromontmontagne.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "bromont-montagne-dexp-rience"
   },
   {
     "id": "openstreetmap-way-1094318196",
@@ -2805,7 +3020,8 @@
     "baseElevation": 502.9,
     "verticalDrop": 599,
     "website": "https://www.madriverglen.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "mad-river-glen"
   },
   {
     "id": "openstreetmap-way-934351306",
@@ -2818,7 +3034,8 @@
     "baseElevation": 85.6,
     "verticalDrop": 752,
     "website": "https://www.alyeskaresort.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "alyeska-resort"
   },
   {
     "id": "openstreetmap-way-1176086204",
@@ -2831,7 +3048,8 @@
     "baseElevation": 283,
     "verticalDrop": 290,
     "website": "https://www.catamountski.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "catamount-mountain-resort"
   },
   {
     "id": "7d1fbb188570d0b702b07a245a264109a6373ecb",
@@ -2844,7 +3062,8 @@
     "baseElevation": 207.2,
     "verticalDrop": 342,
     "website": "https://skihickory.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "hickory-ski-center"
   },
   {
     "id": "openstreetmap-way-1144096092",
@@ -2857,7 +3076,8 @@
     "baseElevation": 2477.3,
     "verticalDrop": 1352,
     "website": "https://www.aspensnowmass.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "aspen-snowmass"
   },
   {
     "id": "openstreetmap-relation-4764744",
@@ -2870,7 +3090,8 @@
     "baseElevation": 1931.8,
     "verticalDrop": 358,
     "website": "https://www.mtashland.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-ashland"
   },
   {
     "id": "openstreetmap-relation-3184061",
@@ -2883,7 +3104,8 @@
     "baseElevation": 2190.8,
     "verticalDrop": 159,
     "website": "https://www.rideboreal.com/winter",
-    "tier": 2
+    "tier": 2,
+    "slug": "boreal-mountain-resort"
   },
   {
     "id": "openstreetmap-way-1228774360",
@@ -2896,7 +3118,8 @@
     "baseElevation": 355.8,
     "verticalDrop": 906,
     "website": "https://www.killington.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "killington-resort"
   },
   {
     "id": "openstreetmap-way-397906933",
@@ -2909,7 +3132,8 @@
     "baseElevation": 183.2,
     "verticalDrop": 158,
     "website": "http://www.skimontgabriel.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-mont-gabriel"
   },
   {
     "id": "openstreetmap-way-893138900",
@@ -2922,7 +3146,8 @@
     "baseElevation": 258,
     "verticalDrop": 279,
     "website": "https://www.skiwhitetail.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "whitetail-resort"
   },
   {
     "id": "openstreetmap-way-1367077684",
@@ -2935,7 +3160,8 @@
     "baseElevation": 657.3,
     "verticalDrop": 187,
     "website": "https://prospectmountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "prospect-mountain"
   },
   {
     "id": "openstreetmap-way-908172888",
@@ -2948,7 +3174,8 @@
     "baseElevation": 1045,
     "verticalDrop": 257,
     "website": "https://www.canaanresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "canaan-valley-ski-resort"
   },
   {
     "id": "openstreetmap-way-934287875",
@@ -2961,7 +3188,8 @@
     "baseElevation": 2244.1,
     "verticalDrop": 865,
     "website": "https://www.instagram.com/chapaverdeski/?hl=es",
-    "tier": 1
+    "tier": 1,
+    "slug": "centro-de-ski-chapa-verde"
   },
   {
     "id": "openstreetmap-way-1263733614",
@@ -2974,7 +3202,8 @@
     "baseElevation": 2621.4,
     "verticalDrop": 640,
     "website": "https://www.angelfireresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "angel-fire-resort"
   },
   {
     "id": "openstreetmap-relation-6559514",
@@ -2987,7 +3216,8 @@
     "baseElevation": 2649.4,
     "verticalDrop": 926,
     "website": "https://www.laparva.cl/",
-    "tier": 1
+    "tier": 1,
+    "slug": "la-parva"
   },
   {
     "id": "openstreetmap-way-1232163832",
@@ -3000,7 +3230,8 @@
     "baseElevation": 239.7,
     "verticalDrop": 477,
     "website": "https://www.owlshead.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "owls-head"
   },
   {
     "id": "openstreetmap-relation-6373343",
@@ -3013,7 +3244,8 @@
     "baseElevation": 622.9,
     "verticalDrop": 415,
     "website": "https://www.belleayre.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "belleayre-mountain-ski-center"
   },
   {
     "id": "openstreetmap-way-1232164006",
@@ -3026,7 +3258,8 @@
     "baseElevation": 1491,
     "verticalDrop": 836,
     "website": "https://tamarackidaho.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "tamarack-resort"
   },
   {
     "id": "openstreetmap-way-934103782",
@@ -3039,7 +3272,8 @@
     "baseElevation": 2215.1,
     "verticalDrop": 564,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "las-le-as"
   },
   {
     "id": "openstreetmap-relation-3184079",
@@ -3052,7 +3286,8 @@
     "baseElevation": 2148.9,
     "verticalDrop": 217,
     "website": "https://www.donnerskiranch.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "donner-ski-ranch"
   },
   {
     "id": "openstreetmap-way-485646186",
@@ -3065,7 +3300,8 @@
     "baseElevation": 384.1,
     "verticalDrop": 253,
     "website": "https://skigarceau.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-garceau"
   },
   {
     "id": "openstreetmap-way-664509572",
@@ -3078,7 +3314,8 @@
     "baseElevation": 2236.8,
     "verticalDrop": 178,
     "website": "https://www.hogadon.net/",
-    "tier": 2
+    "tier": 2,
+    "slug": "hogadon-basin-ski-area"
   },
   {
     "id": "openstreetmap-way-473859022",
@@ -3091,7 +3328,8 @@
     "baseElevation": 366,
     "verticalDrop": 170,
     "website": "https://www.snowriver.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "jackson-creek-summit"
   },
   {
     "id": "8777841b467c81b782f894a4ba883ce37dafb9c3",
@@ -3104,7 +3342,8 @@
     "baseElevation": 2997.7,
     "verticalDrop": 469,
     "website": "https://cimarronmountainclub.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "cimarron-mountain-club"
   },
   {
     "id": "openstreetmap-way-691516993",
@@ -3117,7 +3356,8 @@
     "baseElevation": 487.3,
     "verticalDrop": 203,
     "website": "https://holimont.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "holimont"
   },
   {
     "id": "openstreetmap-way-1198408358",
@@ -3130,7 +3370,8 @@
     "baseElevation": 92.6,
     "verticalDrop": 244,
     "website": "https://www.montbechervaise.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "centre-de-ski-mont-b-chervaise"
   },
   {
     "id": "openstreetmap-way-530521512",
@@ -3143,7 +3384,8 @@
     "baseElevation": 2785.4,
     "verticalDrop": 716,
     "website": "https://www.skicb.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "crested-butte-mountain-resort"
   },
   {
     "id": "openstreetmap-way-1303060558",
@@ -3156,7 +3398,8 @@
     "baseElevation": 344.1,
     "verticalDrop": 257,
     "website": "https://www.hunthollow.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "hunt-hollow-ski-club"
   },
   {
     "id": "openstreetmap-way-1230199887",
@@ -3169,7 +3412,8 @@
     "baseElevation": 380.5,
     "verticalDrop": 445,
     "website": "https://www.mountsunapee.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-sunapee"
   },
   {
     "id": "openstreetmap-relation-13336421",
@@ -3182,7 +3426,8 @@
     "baseElevation": 1905.9,
     "verticalDrop": 760,
     "website": "https://www.palisadestahoe.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "palisades-tahoe-olympic-valley"
   },
   {
     "id": "openstreetmap-relation-5884205",
@@ -3195,7 +3440,8 @@
     "baseElevation": 924.2,
     "verticalDrop": 156,
     "website": "https://www.winterplace.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "winterplace-ski-resort"
   },
   {
     "id": "openstreetmap-way-1412281678",
@@ -3208,7 +3454,8 @@
     "baseElevation": 1530.8,
     "verticalDrop": 859,
     "website": "https://corralco.com/eng/19/Montana/",
-    "tier": 1
+    "tier": 1,
+    "slug": "corralco"
   },
   {
     "id": "openstreetmap-way-780024394",
@@ -3221,7 +3468,8 @@
     "baseElevation": 338,
     "verticalDrop": 172,
     "website": "https://www.miserymountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "misery-mountain-ski-hill"
   },
   {
     "id": "openstreetmap-relation-14336718",
@@ -3234,7 +3482,8 @@
     "baseElevation": 498.7,
     "verticalDrop": 430,
     "website": "https://www.windhammountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "windham-mountain-club"
   },
   {
     "id": "openstreetmap-way-1124250244",
@@ -3247,7 +3496,8 @@
     "baseElevation": 2023.4,
     "verticalDrop": 718,
     "website": "https://powdermountain.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "powder-mountain-ski-resort"
   },
   {
     "id": "8e3f8734ad744aaeedf8b71fa19ec1c1b4cf2aaf",
@@ -3260,7 +3510,8 @@
     "baseElevation": 1040.2,
     "verticalDrop": 324,
     "website": "https://www.purden.com/skiabout.html",
-    "tier": 2
+    "tier": 2,
+    "slug": "purden-ski-village"
   },
   {
     "id": "openstreetmap-relation-5886546",
@@ -3273,7 +3524,8 @@
     "baseElevation": 1432.2,
     "verticalDrop": 229,
     "website": "https://www.beechmountainresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "beech-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-5535401",
@@ -3286,7 +3538,8 @@
     "baseElevation": 793.6,
     "verticalDrop": 238,
     "website": "http://www.tabormountain.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "tabor-mountain"
   },
   {
     "id": "openstreetmap-relation-19733493",
@@ -3299,7 +3552,8 @@
     "baseElevation": 294,
     "verticalDrop": 319,
     "website": "https://www.skiblackmountain.org/",
-    "tier": 2
+    "tier": 2,
+    "slug": "black-mountain-of-maine"
   },
   {
     "id": "openstreetmap-way-531009607",
@@ -3312,7 +3566,8 @@
     "baseElevation": 2455,
     "verticalDrop": 1069,
     "website": "https://www.vail.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "vail"
   },
   {
     "id": "openstreetmap-way-1362710273",
@@ -3325,7 +3580,8 @@
     "baseElevation": 154.2,
     "verticalDrop": 173,
     "website": "https://montfarlagne.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-farlagne"
   },
   {
     "id": "openstreetmap-way-530998526",
@@ -3338,7 +3594,8 @@
     "baseElevation": 2105,
     "verticalDrop": 1103,
     "website": "https://www.steamboat.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "steamboat-ski-resort"
   },
   {
     "id": "910213a831325f2204293c0ff77f8bcaa1a231a1",
@@ -3351,7 +3608,8 @@
     "baseElevation": 434,
     "verticalDrop": 318,
     "website": "https://skilandfairbanks.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mt-aurora-skiland"
   },
   {
     "id": "openstreetmap-way-896906716",
@@ -3364,7 +3622,8 @@
     "baseElevation": 434.2,
     "verticalDrop": 152,
     "website": "https://www.skifairview.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "fairview-ski-hill"
   },
   {
     "id": "92409f9e8ac9784d5c3326d2253d3e94e5c4cba0",
@@ -3377,7 +3636,8 @@
     "baseElevation": 232,
     "verticalDrop": 190,
     "website": "https://www.searchmont.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "searchmont-resort"
   },
   {
     "id": "openstreetmap-relation-19375326",
@@ -3390,7 +3650,8 @@
     "baseElevation": 193.3,
     "verticalDrop": 246,
     "website": "https://www.mtbohemia.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-bohemia"
   },
   {
     "id": "openstreetmap-relation-18792769",
@@ -3403,7 +3664,8 @@
     "baseElevation": 607.8,
     "verticalDrop": 257,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "fqme-mont-porphyre"
   },
   {
     "id": "949e0e079fed38e9ddfc46b75b3abb4dfe0be574",
@@ -3416,7 +3678,8 @@
     "baseElevation": 560.8,
     "verticalDrop": 175,
     "website": "https://oakmountainski.com/oak/",
-    "tier": 2
+    "tier": 2,
+    "slug": "oak-mountain-ski-center"
   },
   {
     "id": "94cda0601e4f77c8fd943895087a91fa14bd7bf5",
@@ -3429,7 +3692,8 @@
     "baseElevation": 67,
     "verticalDrop": 159,
     "website": "https://www.skigallix.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "gallix"
   },
   {
     "id": "openstreetmap-relation-13532756",
@@ -3442,7 +3706,8 @@
     "baseElevation": 262.3,
     "verticalDrop": 275,
     "website": "https://www.skiwhitetail.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "whitetail-resort-pennsylvania"
   },
   {
     "id": "openstreetmap-way-474288286",
@@ -3455,7 +3720,8 @@
     "baseElevation": 655.5,
     "verticalDrop": 1606,
     "website": "https://www.whistlerblackcomb.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "whistler-blackcomb"
   },
   {
     "id": "openstreetmap-relation-5853609",
@@ -3468,7 +3734,8 @@
     "baseElevation": 341.2,
     "verticalDrop": 199,
     "website": "https://www.skimontblanc.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-mont-blanc"
   },
   {
     "id": "openstreetmap-way-1092381874",
@@ -3481,7 +3748,8 @@
     "baseElevation": 610.1,
     "verticalDrop": 234,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "timber-ridge"
   },
   {
     "id": "openstreetmap-relation-10326057",
@@ -3494,7 +3762,8 @@
     "baseElevation": 2114.1,
     "verticalDrop": 439,
     "website": "https://www.sugarbowl.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sugar-bowl-resort"
   },
   {
     "id": "openstreetmap-way-461239598",
@@ -3507,7 +3776,8 @@
     "baseElevation": 3294.7,
     "verticalDrop": 508,
     "website": "https://www.arapahoebasin.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "arapahoe-basin-ski-area"
   },
   {
     "id": "openstreetmap-relation-4780217",
@@ -3520,7 +3790,8 @@
     "baseElevation": 1388,
     "verticalDrop": 337,
     "website": "https://www.bluewood.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "bluewood"
   },
   {
     "id": "openstreetmap-relation-15717134",
@@ -3533,7 +3804,8 @@
     "baseElevation": 2151.3,
     "verticalDrop": 482,
     "website": "https://www.skichinapeak.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "china-peak-mountain-resort"
   },
   {
     "id": "openstreetmap-way-1214590684",
@@ -3546,7 +3818,8 @@
     "baseElevation": 145.6,
     "verticalDrop": 154,
     "website": "https://www.westpointmwr.com/ski/",
-    "tier": 2
+    "tier": 2,
+    "slug": "victor-constant-ski-area"
   },
   {
     "id": "openstreetmap-way-530503256",
@@ -3559,7 +3832,8 @@
     "baseElevation": 3135.4,
     "verticalDrop": 451,
     "website": "https://www.wolfcreekski.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "wolf-creek-ski-area"
   },
   {
     "id": "openstreetmap-relation-5273049",
@@ -3572,7 +3846,8 @@
     "baseElevation": 2680.5,
     "verticalDrop": 260,
     "website": "https://snowyrangeski.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "snowy-range"
   },
   {
     "id": "openstreetmap-way-184326663",
@@ -3585,7 +3860,8 @@
     "baseElevation": 3247.8,
     "verticalDrop": 246,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "loveland-valley-ski-area"
   },
   {
     "id": "openstreetmap-way-997160539",
@@ -3598,7 +3874,8 @@
     "baseElevation": 241,
     "verticalDrop": 161,
     "website": "https://www.boynehighlands.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "boyne-highlands-resort"
   },
   {
     "id": "openstreetmap-way-387976211",
@@ -3611,7 +3888,8 @@
     "baseElevation": 186.1,
     "verticalDrop": 322,
     "website": "https://montstemarie.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-ste-marie"
   },
   {
     "id": "openstreetmap-way-1074335726",
@@ -3624,7 +3902,8 @@
     "baseElevation": 1930.5,
     "verticalDrop": 1238,
     "website": "https://www.jacksonhole.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "jackson-hole-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-5368939",
@@ -3637,7 +3916,8 @@
     "baseElevation": 279.1,
     "verticalDrop": 178,
     "website": "https://www.skichantecler.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-chantecler"
   },
   {
     "id": "a3f94ad39791eb8cce3a76d29ce357bfdc573875",
@@ -3650,7 +3930,8 @@
     "baseElevation": 166,
     "verticalDrop": 187,
     "website": "https://antoinemountain.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "antoine-mountin"
   },
   {
     "id": "a5691d4b2355c09838a6385347330cec53e63b4e",
@@ -3663,7 +3944,8 @@
     "baseElevation": 2312.6,
     "verticalDrop": 195,
     "website": "https://www.skytavern.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sky-tavern"
   },
   {
     "id": "a69e726ad816e743f1abff11e3813659637a008f",
@@ -3676,7 +3958,8 @@
     "baseElevation": 375.6,
     "verticalDrop": 245,
     "website": "https://www.camelbackresort.com/ski-tube/poconos-ski-snowboarding-resort/",
-    "tier": 2
+    "tier": 2,
+    "slug": "camelback-resort"
   },
   {
     "id": "openstreetmap-way-392376125",
@@ -3689,7 +3972,8 @@
     "baseElevation": 214,
     "verticalDrop": 170,
     "website": "https://www.ski-bigbear.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "big-bear-ski-resort"
   },
   {
     "id": "openstreetmap-way-168091593",
@@ -3702,7 +3986,8 @@
     "baseElevation": 977.1,
     "verticalDrop": 402,
     "website": "https://www.sitesandtrailsbc.ca/search/search-result.aspx?site=REC4564&type=Site",
-    "tier": 2
+    "tier": 2,
+    "slug": "telemark-cross-country-ski-trails-recreation-site"
   },
   {
     "id": "openstreetmap-way-1021872776",
@@ -3715,7 +4000,8 @@
     "baseElevation": 383,
     "verticalDrop": 341,
     "website": "https://www.jiminypeak.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "jiminy-peak-resort"
   },
   {
     "id": "openstreetmap-way-334246239",
@@ -3728,7 +4014,8 @@
     "baseElevation": 261.2,
     "verticalDrop": 667,
     "website": "https://www.loonmtn.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "loon-mountain-resort"
   },
   {
     "id": "a8ab0454ef6f2fb1558043ede577f015c4ef113b",
@@ -3741,7 +4028,8 @@
     "baseElevation": 21.5,
     "verticalDrop": 170,
     "website": "https://www.montcastor.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-castor"
   },
   {
     "id": "a8d8386c9dcf8674f8a5e383e5b20a107a0f67dc",
@@ -3754,7 +4042,8 @@
     "baseElevation": 56.7,
     "verticalDrop": 226,
     "website": "https://www.skiwentworth.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-wentworth"
   },
   {
     "id": "openstreetmap-way-682230007",
@@ -3767,7 +4056,8 @@
     "baseElevation": 2673.8,
     "verticalDrop": 515,
     "website": "https://brightonresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "brighton-resort"
   },
   {
     "id": "openstreetmap-way-1472725361",
@@ -3780,7 +4070,8 @@
     "baseElevation": 1796.5,
     "verticalDrop": 526,
     "website": "https://brundage.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "brundage-mountain"
   },
   {
     "id": "openstreetmap-relation-12130404",
@@ -3793,7 +4084,8 @@
     "baseElevation": 1045,
     "verticalDrop": 256,
     "website": "https://www.canaanresort.com/winter/",
-    "tier": 2
+    "tier": 2,
+    "slug": "canaan-valley-resort"
   },
   {
     "id": "openstreetmap-way-256024127",
@@ -3806,7 +4098,8 @@
     "baseElevation": 188.4,
     "verticalDrop": 500,
     "website": "https://www.attitash.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "attitash-mountain-resort"
   },
   {
     "id": "ab17f5bcb69a5adc26ca1200481bd37bd64dead1",
@@ -3819,7 +4112,8 @@
     "baseElevation": 2144.8,
     "verticalDrop": 340,
     "website": "https://threeforksranch.com/skiing-snowboarding.html",
-    "tier": 2
+    "tier": 2,
+    "slug": "three-forks-ranch"
   },
   {
     "id": "ab8b0ec4dfc7e12322432b1e5718b1cc64ba4129",
@@ -3832,7 +4126,8 @@
     "baseElevation": 159,
     "verticalDrop": 190,
     "website": "https://www.montgleason.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-gleason"
   },
   {
     "id": "openstreetmap-relation-18791138",
@@ -3845,7 +4140,8 @@
     "baseElevation": 536.3,
     "verticalDrop": 307,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "fqme-station-mont-ste-c-cile"
   },
   {
     "id": "openstreetmap-way-1244099443",
@@ -3858,7 +4154,8 @@
     "baseElevation": 1757.6,
     "verticalDrop": 1030,
     "website": "https://www.sunvalley.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "sun-valley-bald-mountain"
   },
   {
     "id": "openstreetmap-way-866496711",
@@ -3871,7 +4168,8 @@
     "baseElevation": 1380,
     "verticalDrop": 840,
     "website": "https://www.skihood.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "mt-hood-meadows-ski-resort"
   },
   {
     "id": "openstreetmap-way-1138470815",
@@ -3884,7 +4182,8 @@
     "baseElevation": 1201.1,
     "verticalDrop": 888,
     "website": "https://www.sunpeaksresort.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "sun-peaks-resort"
   },
   {
     "id": "openstreetmap-relation-5617142",
@@ -3897,7 +4196,8 @@
     "baseElevation": 2493.6,
     "verticalDrop": 506,
     "website": "https://www.powderhorn.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "powderhorn"
   },
   {
     "id": "openstreetmap-way-691518491",
@@ -3910,7 +4210,8 @@
     "baseElevation": 317.8,
     "verticalDrop": 289,
     "website": "https://www.titusmountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "titus-mountain"
   },
   {
     "id": "openstreetmap-way-739168515",
@@ -3923,7 +4224,8 @@
     "baseElevation": 1665.1,
     "verticalDrop": 1022,
     "website": "https://www.skibanff.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "banff-sunshine-village"
   },
   {
     "id": "openstreetmap-way-1023308078",
@@ -3936,7 +4238,8 @@
     "baseElevation": 2368.1,
     "verticalDrop": 974,
     "website": "https://www.snowbird.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "snowbird"
   },
   {
     "id": "openstreetmap-relation-15048417",
@@ -3949,7 +4252,8 @@
     "baseElevation": 2504.2,
     "verticalDrop": 316,
     "website": "https://www.sipapu.ski/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sipapu-ski-and-summer-resort"
   },
   {
     "id": "openstreetmap-relation-19853683",
@@ -3962,7 +4266,8 @@
     "baseElevation": 206.5,
     "verticalDrop": 158,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "st-alex-ski"
   },
   {
     "id": "b1b6401c3fec2ec154670be22da75f9d838ab0d1",
@@ -3975,7 +4280,8 @@
     "baseElevation": 831.7,
     "verticalDrop": 579,
     "website": "https://www.telefericobariloche.com.ar/",
-    "tier": 2
+    "tier": 2,
+    "slug": "complejo-tur-stico-telef-rico-cerro-otto"
   },
   {
     "id": "openstreetmap-relation-4640183",
@@ -3988,7 +4294,8 @@
     "baseElevation": 2947,
     "verticalDrop": 546,
     "website": "https://www.skiapache.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-apache"
   },
   {
     "id": "openstreetmap-way-496731546",
@@ -4001,7 +4308,8 @@
     "baseElevation": 280.4,
     "verticalDrop": 226,
     "website": "https://www.oslerbluff.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "osler-bluff-ski-club"
   },
   {
     "id": "openstreetmap-way-375130755",
@@ -4014,7 +4322,8 @@
     "baseElevation": 1771.8,
     "verticalDrop": 269,
     "website": "https://skikelly.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "kelly-canyon-ski-resort"
   },
   {
     "id": "openstreetmap-way-1242402506",
@@ -4027,7 +4336,8 @@
     "baseElevation": 754.7,
     "verticalDrop": 186,
     "website": "https://www.omnihotels.com/hotels/homestead-virginia/things-to-do/ski",
-    "tier": 2
+    "tier": 2,
+    "slug": "the-homestead-ski-area"
   },
   {
     "id": "openstreetmap-way-415176032",
@@ -4040,7 +4350,8 @@
     "baseElevation": 290.7,
     "verticalDrop": 317,
     "website": "https://www.mtabram.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-abram"
   },
   {
     "id": "openstreetmap-way-1094579154",
@@ -4053,7 +4364,8 @@
     "baseElevation": 459,
     "verticalDrop": 777,
     "website": "https://www.sugarbush.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "sugarbush-resort"
   },
   {
     "id": "openstreetmap-way-530498773",
@@ -4066,7 +4378,8 @@
     "baseElevation": 2524.5,
     "verticalDrop": 187,
     "website": "https://ski-hesperus.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "hesperus-ski-area"
   },
   {
     "id": "openstreetmap-way-1244066741",
@@ -4079,7 +4392,8 @@
     "baseElevation": 1720.2,
     "verticalDrop": 757,
     "website": "https://www.skimarmot.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "marmot-basin"
   },
   {
     "id": "openstreetmap-way-1388573249",
@@ -4092,7 +4406,8 @@
     "baseElevation": 1365.4,
     "verticalDrop": 698,
     "website": "https://skiwhitefish.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "whitefish-mountain-resort"
   },
   {
     "id": "openstreetmap-way-390536570",
@@ -4105,7 +4420,8 @@
     "baseElevation": 140.5,
     "verticalDrop": 328,
     "website": "https://www.skibluemt.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "blue-mountain-resort"
   },
   {
     "id": "b84ee4b0cdfdd2fad20c93f01dec64b7976c79f3",
@@ -4118,7 +4434,8 @@
     "baseElevation": 1632.4,
     "verticalDrop": 455,
     "website": "https://www.banffnorquay.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-norquay"
   },
   {
     "id": "openstreetmap-way-1228627171",
@@ -4131,7 +4448,8 @@
     "baseElevation": 1866.2,
     "verticalDrop": 588,
     "website": "https://bridgerbowl.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "bridger-bowl"
   },
   {
     "id": "openstreetmap-way-884007908",
@@ -4144,7 +4462,8 @@
     "baseElevation": 1194,
     "verticalDrop": 567,
     "website": "https://www.ski49n.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "49-north-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-3187211",
@@ -4157,7 +4476,8 @@
     "baseElevation": 2795.8,
     "verticalDrop": 720,
     "website": "http://www.arizonasnowbowl.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "arizona-snowbowl"
   },
   {
     "id": "openstreetmap-way-255716854",
@@ -4170,7 +4490,8 @@
     "baseElevation": 338,
     "verticalDrop": 335,
     "website": "https://www.raggedmountainresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ragged-mountain-resort"
   },
   {
     "id": "openstreetmap-way-422839115",
@@ -4183,7 +4504,8 @@
     "baseElevation": 204.9,
     "verticalDrop": 220,
     "website": "https://www.skirelais.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "centre-de-ski-le-relais"
   },
   {
     "id": "openstreetmap-way-450395267",
@@ -4196,7 +4518,8 @@
     "baseElevation": 243,
     "verticalDrop": 159,
     "website": "https://granitegorge.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "granite-gorge-ski-area"
   },
   {
     "id": "openstreetmap-way-233886400",
@@ -4209,7 +4532,8 @@
     "baseElevation": 27,
     "verticalDrop": 162,
     "website": "https://www.martock.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-martock"
   },
   {
     "id": "openstreetmap-way-918681867",
@@ -4222,7 +4546,8 @@
     "baseElevation": 1968.6,
     "verticalDrop": 1076,
     "website": "https://parkcitymountain.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "park-city-mountain-resort"
   },
   {
     "id": "openstreetmap-way-859506501",
@@ -4235,7 +4560,8 @@
     "baseElevation": 2053.1,
     "verticalDrop": 185,
     "website": "https://magicmountainresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "magic-mountain-resort"
   },
   {
     "id": "openstreetmap-way-308152532",
@@ -4248,7 +4574,8 @@
     "baseElevation": 3251.4,
     "verticalDrop": 346,
     "website": "https://www.skimonarch.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "monarch-mountain"
   },
   {
     "id": "openstreetmap-way-464663503",
@@ -4261,7 +4588,8 @@
     "baseElevation": 315,
     "verticalDrop": 261,
     "website": "https://www.valsaintcome.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "station-touristique-val-saint-c-me"
   },
   {
     "id": "openstreetmap-way-682231907",
@@ -4274,7 +4602,8 @@
     "baseElevation": 2461.4,
     "verticalDrop": 904,
     "website": "https://www.mammothmountain.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "mammoth-mountain"
   },
   {
     "id": "bf3f8f78af125ab807b1513a23e6c2d5fdcb8938",
@@ -4287,7 +4616,8 @@
     "baseElevation": 1370.4,
     "verticalDrop": 1106,
     "website": "https://wallowalaketramway.com/activities/",
-    "tier": 1
+    "tier": 1,
+    "slug": "high-wallowas"
   },
   {
     "id": "bf6afe86945513e83720c59303658436be745f18",
@@ -4300,7 +4630,8 @@
     "baseElevation": 2639.4,
     "verticalDrop": 494,
     "website": "https://www.redriverskiarea.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "red-river-ski-area"
   },
   {
     "id": "c144410697ffbce10d411c7215d6aa46d4dc895b",
@@ -4313,7 +4644,8 @@
     "baseElevation": 1611.7,
     "verticalDrop": 166,
     "website": "https://www.lassencollege.edu/about-us/about-the-area/coppervale",
-    "tier": 2
+    "tier": 2,
+    "slug": "coppervale"
   },
   {
     "id": "c17f55c24f23253cb09007668045eba3694c5528",
@@ -4326,7 +4658,8 @@
     "baseElevation": 373,
     "verticalDrop": 155,
     "website": "https://www.royalmountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "royal-mountain"
   },
   {
     "id": "openstreetmap-relation-18180679",
@@ -4339,7 +4672,8 @@
     "baseElevation": 3084.2,
     "verticalDrop": 220,
     "website": "https://www.tennesseepass.com/nordic-center/xc-skiing/",
-    "tier": 2
+    "tier": 2,
+    "slug": "tennessee-pass"
   },
   {
     "id": "c2fe7824cbc460b8d89ae68465f6b893fc548b04",
@@ -4352,7 +4686,8 @@
     "baseElevation": 235.1,
     "verticalDrop": 154,
     "website": "https://marquettemountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "marquette-mountain"
   },
   {
     "id": "openstreetmap-way-531005985",
@@ -4365,7 +4700,8 @@
     "baseElevation": 2922.2,
     "verticalDrop": 988,
     "website": "https://www.breckenridge.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "breckenridge"
   },
   {
     "id": "openstreetmap-relation-4644818",
@@ -4378,7 +4714,8 @@
     "baseElevation": 2647.4,
     "verticalDrop": 488,
     "website": "https://www.sandia.ski/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sandia-peak-ski-area"
   },
   {
     "id": "openstreetmap-relation-3187217",
@@ -4391,7 +4728,8 @@
     "baseElevation": 2530,
     "verticalDrop": 222,
     "website": "https://www.skithelemmon.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-lemmon-ski-valley"
   },
   {
     "id": "c4642801dc47f1a08a99a528a45e1d960ad8cde2",
@@ -4404,7 +4742,8 @@
     "baseElevation": 1841,
     "verticalDrop": 184,
     "website": "https://deermountainvillage.com/the-mountain/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-mystic-deer-mountain"
   },
   {
     "id": "openstreetmap-way-1126110799",
@@ -4417,7 +4756,8 @@
     "baseElevation": 1210.9,
     "verticalDrop": 191,
     "website": "https://hatleypointe.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "hatley-pointe"
   },
   {
     "id": "openstreetmap-relation-15656310",
@@ -4430,7 +4770,8 @@
     "baseElevation": 317,
     "verticalDrop": 519,
     "website": "http://www.orford.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-orford"
   },
   {
     "id": "openstreetmap-way-391681261",
@@ -4443,7 +4784,8 @@
     "baseElevation": 178.4,
     "verticalDrop": 624,
     "website": "https://mont-sainte-anne.com/en/",
-    "tier": 1
+    "tier": 1,
+    "slug": "mont-sainte-anne"
   },
   {
     "id": "openstreetmap-way-909322254",
@@ -4456,7 +4798,8 @@
     "baseElevation": 1982.8,
     "verticalDrop": 333,
     "website": "https://www.skifortress.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "fortress-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-18792503",
@@ -4469,7 +4812,8 @@
     "baseElevation": 248.9,
     "verticalDrop": 237,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "poh-n-gamook-en-montagne"
   },
   {
     "id": "openstreetmap-way-1266090145",
@@ -4482,7 +4826,8 @@
     "baseElevation": 2161.2,
     "verticalDrop": 696,
     "website": "https://www.redlodgemountain.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "red-lodge-mountain"
   },
   {
     "id": "openstreetmap-way-1263735248",
@@ -4495,7 +4840,8 @@
     "baseElevation": 1743.5,
     "verticalDrop": 740,
     "website": "https://www.skidiscovery.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "discovery-ski-area"
   },
   {
     "id": "openstreetmap-relation-5450066",
@@ -4508,7 +4854,8 @@
     "baseElevation": 1271,
     "verticalDrop": 165,
     "website": "https://albertaparks.ca/hiddenvalley",
-    "tier": 2
+    "tier": 2,
+    "slug": "hidden-valley-ski-resort"
   },
   {
     "id": "openstreetmap-relation-20111004",
@@ -4521,7 +4868,8 @@
     "baseElevation": 163.7,
     "verticalDrop": 405,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-saguenay"
   },
   {
     "id": "openstreetmap-way-1135232092",
@@ -4534,7 +4882,8 @@
     "baseElevation": 817.9,
     "verticalDrop": 176,
     "website": "https://bvnordic.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "bulkley-valley-nordic-centre"
   },
   {
     "id": "openstreetmap-way-671144531",
@@ -4547,7 +4896,8 @@
     "baseElevation": 226.8,
     "verticalDrop": 646,
     "website": "https://www.tremblant.ca",
-    "tier": 1
+    "tier": 1,
+    "slug": "mont-tremblant-resort-station-mont-tremblant"
   },
   {
     "id": "openstreetmap-way-28707473",
@@ -4560,7 +4910,8 @@
     "baseElevation": 1043.7,
     "verticalDrop": 1052,
     "website": "https://www.catedralaltapatagonia.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "cerro-catedral"
   },
   {
     "id": "openstreetmap-way-934096931",
@@ -4573,7 +4924,8 @@
     "baseElevation": 988.1,
     "verticalDrop": 746,
     "website": "https://www.laderas.com.ar/",
-    "tier": 1
+    "tier": 1,
+    "slug": "cerro-perito-moreno"
   },
   {
     "id": "openstreetmap-relation-8391726",
@@ -4586,7 +4938,8 @@
     "baseElevation": 1909.2,
     "verticalDrop": 501,
     "website": "https://www.skihomewood.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "homewood-ski-area"
   },
   {
     "id": "openstreetmap-way-1420235319",
@@ -4599,7 +4952,8 @@
     "baseElevation": 174.6,
     "verticalDrop": 151,
     "website": "https://www.woodsvalleyskiarea.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "woods-valley"
   },
   {
     "id": "openstreetmap-way-980981935",
@@ -4612,7 +4966,8 @@
     "baseElevation": 752.8,
     "verticalDrop": 190,
     "website": "https://www.wispresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "wisp-resort"
   },
   {
     "id": "openstreetmap-way-397906936",
@@ -4625,7 +4980,8 @@
     "baseElevation": 292,
     "verticalDrop": 154,
     "website": "https://www.sommets.com/en/discover-les-sommets/sommet-morin-heights-winter/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-morin-heights"
   },
   {
     "id": "cd52cfebdda8e84997b3447573546b8d17bc8e6d",
@@ -4638,7 +4994,8 @@
     "baseElevation": 1168,
     "verticalDrop": 563,
     "website": "https://www.stevenspass.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "stevens-pass-ski-area"
   },
   {
     "id": "openstreetmap-way-475720359",
@@ -4651,7 +5008,8 @@
     "baseElevation": 516.8,
     "verticalDrop": 1707,
     "website": "https://www.revelstokemountainresort.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "revelstoke-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-14934032",
@@ -4664,7 +5022,8 @@
     "baseElevation": 3154.7,
     "verticalDrop": 535,
     "website": "https://www.skisantafe.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-santa-fe-santa-fe-q38555"
   },
   {
     "id": "openstreetmap-way-334259462",
@@ -4677,7 +5036,8 @@
     "baseElevation": 462.3,
     "verticalDrop": 180,
     "website": "https://www.waterville.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "waterville-valley-resort-nordic"
   },
   {
     "id": "openstreetmap-relation-6704136",
@@ -4690,7 +5050,8 @@
     "baseElevation": 2097,
     "verticalDrop": 493,
     "website": "https://www.palisadestahoe.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "palisades-tahoe-alpine-meadows"
   },
   {
     "id": "openstreetmap-way-769536984",
@@ -4703,7 +5064,8 @@
     "baseElevation": 417.1,
     "verticalDrop": 304,
     "website": "http://www.clearwaterskihill.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "clearwater-ski-hill"
   },
   {
     "id": "openstreetmap-relation-4666979",
@@ -4716,7 +5078,8 @@
     "baseElevation": 1668.6,
     "verticalDrop": 631,
     "website": "https://www.skipark.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mt-shasta-ski-park"
   },
   {
     "id": "openstreetmap-way-934033486",
@@ -4729,7 +5092,8 @@
     "baseElevation": 1047.6,
     "verticalDrop": 731,
     "website": "https://www.cerrobayo.com.ar/",
-    "tier": 1
+    "tier": 1,
+    "slug": "cerro-bayo"
   },
   {
     "id": "openstreetmap-way-1030492885",
@@ -4742,7 +5106,8 @@
     "baseElevation": 2536,
     "verticalDrop": 194,
     "website": "https://skicloudcroft.net",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-cloudcroft"
   },
   {
     "id": "openstreetmap-relation-5883857",
@@ -4755,7 +5120,8 @@
     "baseElevation": 1001.7,
     "verticalDrop": 295,
     "website": "https://timberlinemountain.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "timberline-mountain-west-virginia"
   },
   {
     "id": "openstreetmap-way-422827842",
@@ -4768,7 +5134,8 @@
     "baseElevation": 247,
     "verticalDrop": 341,
     "website": "https://www.ski-stoneham.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "station-de-ski-du-mont-stoneham"
   },
   {
     "id": "openstreetmap-way-1079343060",
@@ -4781,7 +5148,8 @@
     "baseElevation": 222,
     "verticalDrop": 191,
     "website": "https://www.saskadenasix.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "saskadena-six"
   },
   {
     "id": "openstreetmap-way-762120835",
@@ -4794,7 +5162,8 @@
     "baseElevation": 1365.9,
     "verticalDrop": 281,
     "website": "https://wapitiskiclub.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "wapiti"
   },
   {
     "id": "openstreetmap-way-1306486693",
@@ -4807,7 +5176,8 @@
     "baseElevation": 1742.3,
     "verticalDrop": 981,
     "website": "https://www.mtbachelor.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "mt-bachelor"
   },
   {
     "id": "openstreetmap-way-679189584",
@@ -4820,7 +5190,8 @@
     "baseElevation": 1213.3,
     "verticalDrop": 1370,
     "website": "https://www.timberlinelodge.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "timberline-lodge-ski-area"
   },
   {
     "id": "openstreetmap-relation-13573224",
@@ -4833,7 +5204,8 @@
     "baseElevation": 2856.3,
     "verticalDrop": 749,
     "website": "https://www.skitaos.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "taos-ski-valley"
   },
   {
     "id": "openstreetmap-way-860260235",
@@ -4846,7 +5218,8 @@
     "baseElevation": 595.7,
     "verticalDrop": 497,
     "website": "https://www.mountsnow.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-snow"
   },
   {
     "id": "openstreetmap-way-1094524069",
@@ -4859,7 +5232,8 @@
     "baseElevation": 370.1,
     "verticalDrop": 609,
     "website": "https://www.skiburke.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "burke-mountain-resort"
   },
   {
     "id": "d4ecb17ce0ea93e6147d46b8141ea537e0c92425",
@@ -4872,7 +5246,8 @@
     "baseElevation": 176.4,
     "verticalDrop": 222,
     "website": "https://www.montlacvert.qc.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-lac-vert"
   },
   {
     "id": "openstreetmap-way-670137935",
@@ -4885,7 +5260,8 @@
     "baseElevation": 15.9,
     "verticalDrop": 269,
     "website": "https://capesmokey.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-cape-smokey"
   },
   {
     "id": "openstreetmap-relation-6855067",
@@ -4898,7 +5274,8 @@
     "baseElevation": 953.9,
     "verticalDrop": 696,
     "website": "https://summitatsnoqualmie.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "alpental"
   },
   {
     "id": "openstreetmap-way-1311290835",
@@ -4911,7 +5288,8 @@
     "baseElevation": 1362.7,
     "verticalDrop": 224,
     "website": "https://cataloochee.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "cataloochee-ski-area-north-carolina"
   },
   {
     "id": "openstreetmap-relation-11518092",
@@ -4924,7 +5302,8 @@
     "baseElevation": 1345.5,
     "verticalDrop": 714,
     "website": "https://www.crystalmountainresort.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "crystal-mountain"
   },
   {
     "id": "openstreetmap-way-317142448",
@@ -4937,7 +5316,8 @@
     "baseElevation": 373.3,
     "verticalDrop": 202,
     "website": "https://www.skigranitepeak.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "granite-peak-ski-area"
   },
   {
     "id": "openstreetmap-way-334259249",
@@ -4950,7 +5330,8 @@
     "baseElevation": 487.9,
     "verticalDrop": 418,
     "website": "https://www.brettonwoods.com/winter_sports/alpine/overview",
-    "tier": 2
+    "tier": 2,
+    "slug": "bretton-woods-ski-area"
   },
   {
     "id": "openstreetmap-relation-4851664",
@@ -4963,7 +5344,8 @@
     "baseElevation": 1946,
     "verticalDrop": 653,
     "website": "https://www.pebblecreekskiarea.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "pebble-creek"
   },
   {
     "id": "openstreetmap-relation-18791251",
@@ -4976,7 +5358,8 @@
     "baseElevation": 184.6,
     "verticalDrop": 255,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "mont-brillant"
   },
   {
     "id": "openstreetmap-way-45096232",
@@ -4989,7 +5372,8 @@
     "baseElevation": 294.5,
     "verticalDrop": 297,
     "website": "Montage Mountain Ski Resort",
-    "tier": 2
+    "tier": 2,
+    "slug": "montage-mountain-ski-area"
   },
   {
     "id": "openstreetmap-relation-3185646",
@@ -5002,7 +5386,8 @@
     "baseElevation": 2014.2,
     "verticalDrop": 482,
     "website": "https://www.mthigh.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mountain-high"
   },
   {
     "id": "openstreetmap-way-1221894855",
@@ -5015,7 +5400,8 @@
     "baseElevation": 655,
     "verticalDrop": 304,
     "website": "https://www.blueknob.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "blue-knob"
   },
   {
     "id": "openstreetmap-way-1070694657",
@@ -5028,7 +5414,8 @@
     "baseElevation": 2182.4,
     "verticalDrop": 490,
     "website": "https://www.skithebeav.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "beaver-mountain"
   },
   {
     "id": "openstreetmap-way-400693011",
@@ -5041,7 +5428,8 @@
     "baseElevation": 148.8,
     "verticalDrop": 238,
     "website": "https://www.crabbemountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "crabbe-mountain-ski-resort"
   },
   {
     "id": "openstreetmap-way-691521200",
@@ -5054,7 +5442,8 @@
     "baseElevation": 404,
     "verticalDrop": 177,
     "website": "https://www.skicny.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "song-mountain-resort"
   },
   {
     "id": "openstreetmap-way-1275118072",
@@ -5067,7 +5456,8 @@
     "baseElevation": 1772.6,
     "verticalDrop": 357,
     "website": "https://www.skicpr.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "cherry-peak-ski-area"
   },
   {
     "id": "openstreetmap-relation-7997903",
@@ -5080,7 +5470,8 @@
     "baseElevation": 440.1,
     "verticalDrop": 238,
     "website": "https://skilareserve.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-la-r-serve"
   },
   {
     "id": "openstreetmap-way-1026091819",
@@ -5093,7 +5484,8 @@
     "baseElevation": 377.5,
     "verticalDrop": 163,
     "website": "https://www.kbski.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "kissing-bridge"
   },
   {
     "id": "openstreetmap-way-1010406137",
@@ -5106,7 +5498,8 @@
     "baseElevation": 122.3,
     "verticalDrop": 253,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-eyak-ski-area"
   },
   {
     "id": "openstreetmap-way-1026204281",
@@ -5119,7 +5512,8 @@
     "baseElevation": 619.2,
     "verticalDrop": 224,
     "website": "https://www.laurelmountainski.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "laurel-mountain-ski-resort"
   },
   {
     "id": "dfb5a1659452e82e215d424f6e83cfaf82fc03d2",
@@ -5132,7 +5526,8 @@
     "baseElevation": 368.6,
     "verticalDrop": 205,
     "website": "http://www.clubandino.cl/",
-    "tier": 2
+    "tier": 2,
+    "slug": "cerro-mirador"
   },
   {
     "id": "openstreetmap-way-427517284",
@@ -5145,7 +5540,8 @@
     "baseElevation": 2830.6,
     "verticalDrop": 405,
     "website": "https://www.eldora.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "eldora"
   },
   {
     "id": "openstreetmap-way-1117698962",
@@ -5158,7 +5554,8 @@
     "baseElevation": 1860.3,
     "verticalDrop": 650,
     "website": "https://www.sundanceresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sundance-resort"
   },
   {
     "id": "openstreetmap-way-934099771",
@@ -5171,7 +5568,8 @@
     "baseElevation": 1249.4,
     "verticalDrop": 623,
     "website": "https://centropillan.cl/",
-    "tier": 1
+    "tier": 1,
+    "slug": "centro-ski-puc-n"
   },
   {
     "id": "openstreetmap-way-1260579139",
@@ -5184,7 +5582,8 @@
     "baseElevation": 1428,
     "verticalDrop": 311,
     "website": "https://skihoodoo.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "hoodoo-ski-area"
   },
   {
     "id": "openstreetmap-way-460246666",
@@ -5197,7 +5596,8 @@
     "baseElevation": 2775,
     "verticalDrop": 882,
     "website": "https://www.winterparkresort.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "winter-park-resort"
   },
   {
     "id": "openstreetmap-way-1117929987",
@@ -5210,7 +5610,8 @@
     "baseElevation": 273.9,
     "verticalDrop": 231,
     "website": "https://www.lutsen.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "lutsen-mountains"
   },
   {
     "id": "openstreetmap-way-330226984",
@@ -5223,7 +5624,8 @@
     "baseElevation": 152,
     "verticalDrop": 192,
     "website": "https://www.sommets.com/en/ski-mountains/sommet-edelweiss/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sommet-edelweiss"
   },
   {
     "id": "openstreetmap-way-1230308747",
@@ -5236,7 +5638,8 @@
     "baseElevation": 2930.6,
     "verticalDrop": 395,
     "website": "https://www.brianhead.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "brian-head-resort"
   },
   {
     "id": "openstreetmap-way-397735832",
@@ -5249,7 +5652,8 @@
     "baseElevation": 1153.6,
     "verticalDrop": 885,
     "website": "https://www.redresort.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "red-mountain-resort"
   },
   {
     "id": "openstreetmap-way-529997955",
@@ -5262,7 +5666,8 @@
     "baseElevation": 2701.5,
     "verticalDrop": 598,
     "website": "https://www.purgatory.ski/",
-    "tier": 2
+    "tier": 2,
+    "slug": "purgatory-resort"
   },
   {
     "id": "e51c914940658334ecf006a31a8c1a65386f0b0d",
@@ -5275,7 +5680,8 @@
     "baseElevation": 281.6,
     "verticalDrop": 286,
     "website": "https://mont-comi.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "parc-du-mont-comi"
   },
   {
     "id": "openstreetmap-way-1362922705",
@@ -5288,7 +5694,8 @@
     "baseElevation": 560.3,
     "verticalDrop": 599,
     "website": "https://www.waterville.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "waterville-valley-resort"
   },
   {
     "id": "openstreetmap-way-1155730256",
@@ -5301,7 +5708,8 @@
     "baseElevation": 1111.6,
     "verticalDrop": 414,
     "website": "https://skibowl.com/winter/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mt-hood-skibowl"
   },
   {
     "id": "openstreetmap-way-1213966697",
@@ -5314,7 +5722,8 @@
     "baseElevation": 1677.7,
     "verticalDrop": 186,
     "website": "https://www.mtellis.org/",
-    "tier": 2
+    "tier": 2,
+    "slug": "bear-canyon"
   },
   {
     "id": "openstreetmap-way-476843455",
@@ -5327,7 +5736,8 @@
     "baseElevation": 1265.3,
     "verticalDrop": 1152,
     "website": "https://kickinghorseresort.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "kicking-horse-resort"
   },
   {
     "id": "openstreetmap-way-1090312348",
@@ -5340,7 +5750,8 @@
     "baseElevation": 189.4,
     "verticalDrop": 181,
     "website": "https://quecheeclub.com/web/pages/skiquechee",
-    "tier": 2
+    "tier": 2,
+    "slug": "ski-quechee"
   },
   {
     "id": "openstreetmap-way-1076348034",
@@ -5353,7 +5764,8 @@
     "baseElevation": 1906.4,
     "verticalDrop": 520,
     "website": "https://snowkingmountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "snow-king-mountain"
   },
   {
     "id": "openstreetmap-way-422321232",
@@ -5366,7 +5778,8 @@
     "baseElevation": 535.5,
     "verticalDrop": 276,
     "website": "https://www.elkskier.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "elk-mountain-ski-resort"
   },
   {
     "id": "openstreetmap-way-1361864388",
@@ -5379,7 +5792,8 @@
     "baseElevation": 1338.7,
     "verticalDrop": 154,
     "website": "https://ride-sitzmark.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sitzmark-ski-hill"
   },
   {
     "id": "openstreetmap-way-531000583",
@@ -5392,7 +5806,8 @@
     "baseElevation": 2833,
     "verticalDrop": 914,
     "website": "http://keystoneresort.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "keystone"
   },
   {
     "id": "openstreetmap-way-378344849",
@@ -5405,7 +5820,8 @@
     "baseElevation": 1423.3,
     "verticalDrop": 657,
     "website": "https://www.skilahoya.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "la-hoya"
   },
   {
     "id": "openstreetmap-relation-4075490",
@@ -5418,7 +5834,8 @@
     "baseElevation": 51,
     "verticalDrop": 447,
     "website": "https://www.pinrouge.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "pin-rouge"
   },
   {
     "id": "eb636736e58ffb00dd988a59ea0a428e541fc6b2",
@@ -5431,7 +5848,8 @@
     "baseElevation": 1725.9,
     "verticalDrop": 392,
     "website": "https://baldyresort.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "mt-baldy-family-ski-area"
   },
   {
     "id": "openstreetmap-way-475723205",
@@ -5444,7 +5862,8 @@
     "baseElevation": 1396.8,
     "verticalDrop": 664,
     "website": "https://www.skiwhitewater.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "whitewater-ski-resort"
   },
   {
     "id": "openstreetmap-way-1274871384",
@@ -5457,7 +5876,8 @@
     "baseElevation": 1871.7,
     "verticalDrop": 962,
     "website": "https://www.mirrranchgroup.com/ranches/wasatch-peaks-ranch/",
-    "tier": 1
+    "tier": 1,
+    "slug": "wasatch-peaks-ranch"
   },
   {
     "id": "openstreetmap-way-334259037",
@@ -5470,7 +5890,8 @@
     "baseElevation": 573.7,
     "verticalDrop": 659,
     "website": "https://www.cannonmt.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "cannon-mountain"
   },
   {
     "id": "openstreetmap-way-528964433",
@@ -5483,7 +5904,8 @@
     "baseElevation": 3146.7,
     "verticalDrop": 214,
     "website": "https://www.silvertonmountain.com/page/home",
-    "tier": 2
+    "tier": 2,
+    "slug": "silverton-mountain"
   },
   {
     "id": "openstreetmap-relation-5264397",
@@ -5496,7 +5918,8 @@
     "baseElevation": 1173.8,
     "verticalDrop": 641,
     "website": "https://www.skiturner.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "turner-mountain"
   },
   {
     "id": "openstreetmap-way-662615625",
@@ -5509,7 +5932,8 @@
     "baseElevation": 185.7,
     "verticalDrop": 243,
     "website": "https://www.patspeak.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "pats-peak"
   },
   {
     "id": "openstreetmap-way-1040649719",
@@ -5522,7 +5946,8 @@
     "baseElevation": 232.8,
     "verticalDrop": 210,
     "website": "https://www.alpineskiclub.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "alpine-ski-club"
   },
   {
     "id": "openstreetmap-way-147037315",
@@ -5535,7 +5960,8 @@
     "baseElevation": 1778.4,
     "verticalDrop": 419,
     "website": "https://www.skigd.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "great-divide-ski-area"
   },
   {
     "id": "openstreetmap-way-620836496",
@@ -5548,7 +5974,8 @@
     "baseElevation": 396.9,
     "verticalDrop": 712,
     "website": "https://www.stowe.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "stowe-mountain-resort"
   },
   {
     "id": "f5226d3ccf70e5d304474d08c7fe64530dd8da01",
@@ -5561,7 +5988,8 @@
     "baseElevation": 885.7,
     "verticalDrop": 341,
     "website": "https://www.nelsonnordicski.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "nelson-nordic"
   },
   {
     "id": "openstreetmap-way-1049205425",
@@ -5574,7 +6002,8 @@
     "baseElevation": 228.7,
     "verticalDrop": 212,
     "website": null,
-    "tier": 2
+    "tier": 2,
+    "slug": "a-venir"
   },
   {
     "id": "openstreetmap-way-1366642639",
@@ -5587,7 +6016,8 @@
     "baseElevation": 72.9,
     "verticalDrop": 250,
     "website": "https://www.camdensnowbowl.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "camden-snow-bowl"
   },
   {
     "id": "openstreetmap-way-476841704",
@@ -5600,7 +6030,8 @@
     "baseElevation": 1081.6,
     "verticalDrop": 402,
     "website": "https://www.harpermountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "harper-mountain"
   },
   {
     "id": "openstreetmap-way-1122543074",
@@ -5613,7 +6044,8 @@
     "baseElevation": 860.2,
     "verticalDrop": 363,
     "website": "https://www.grousemountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "grouse-mountain"
   },
   {
     "id": "openstreetmap-relation-18653810",
@@ -5626,7 +6058,8 @@
     "baseElevation": 2193.4,
     "verticalDrop": 808,
     "website": "https://yellowstoneclub.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "yellowstone-club"
   },
   {
     "id": "openstreetmap-way-1228354294",
@@ -5639,7 +6072,8 @@
     "baseElevation": 340.4,
     "verticalDrop": 771,
     "website": "https://www.smuggs.com/",
-    "tier": 1
+    "tier": 1,
+    "slug": "smugglers-notch-resort"
   },
   {
     "id": "f8b53b3a8877da729d91d06006c518da8b6bd5ca",
@@ -5652,7 +6086,8 @@
     "baseElevation": 2584.8,
     "verticalDrop": 242,
     "website": "https://meadowlarklakeresort.com/ski-area/",
-    "tier": 2
+    "tier": 2,
+    "slug": "meadowlark-ski-lodge-big-horn-ski-resort"
   },
   {
     "id": "openstreetmap-relation-5291542",
@@ -5665,7 +6100,8 @@
     "baseElevation": 442.5,
     "verticalDrop": 242,
     "website": "https://valdi.ski/en/home.html",
-    "tier": 2
+    "tier": 2,
+    "slug": "val-dir-ne"
   },
   {
     "id": "openstreetmap-way-496731547",
@@ -5678,7 +6114,8 @@
     "baseElevation": 188.6,
     "verticalDrop": 253,
     "website": "https://www.georgianpeaks.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "georgian-peaks-club"
   },
   {
     "id": "openstreetmap-way-320434895",
@@ -5691,7 +6128,8 @@
     "baseElevation": 307,
     "verticalDrop": 348,
     "website": "https://www.bristolmountain.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "bristol-mountain-ski-resort"
   },
   {
     "id": "openstreetmap-way-387979659",
@@ -5704,7 +6142,8 @@
     "baseElevation": 156.9,
     "verticalDrop": 208,
     "website": "https://www.calabogie.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "calabogie-peaks"
   },
   {
     "id": "openstreetmap-way-184326673",
@@ -5717,7 +6156,8 @@
     "baseElevation": 3321.7,
     "verticalDrop": 546,
     "website": "https://www.skiloveland.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "loveland-basin-ski-area"
   },
   {
     "id": "openstreetmap-way-665342233",
@@ -5730,7 +6170,8 @@
     "baseElevation": 549.3,
     "verticalDrop": 241,
     "website": "https://chic-chac.com/en/ski-and-snowboard1/skimontmiller/",
-    "tier": 2
+    "tier": 2,
+    "slug": "station-de-ski-mont-miller"
   },
   {
     "id": "openstreetmap-relation-5264735",
@@ -5743,7 +6184,8 @@
     "baseElevation": 2093.4,
     "verticalDrop": 404,
     "website": "https://www.showdownmontana.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "showdown"
   },
   {
     "id": "openstreetmap-way-476842734",
@@ -5756,7 +6198,8 @@
     "baseElevation": 978.2,
     "verticalDrop": 336,
     "website": "https://sasquatchmountain.ca/",
-    "tier": 2
+    "tier": 2,
+    "slug": "sasquatch-mountain-resort"
   },
   {
     "id": "openstreetmap-relation-5450140",
@@ -5769,7 +6212,8 @@
     "baseElevation": 1295.2,
     "verticalDrop": 294,
     "website": "https://www.passpowderkeg.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "pass-powderkeg-ski"
   },
   {
     "id": "fdaaba3bf4b16da8258686a320c75fbef07186ea",
@@ -5782,7 +6226,8 @@
     "baseElevation": 695.5,
     "verticalDrop": 337,
     "website": "https://www.skisalmo.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "salmo-ski-area"
   },
   {
     "id": "openstreetmap-relation-10664978",
@@ -5795,7 +6240,8 @@
     "baseElevation": 1081.3,
     "verticalDrop": 483,
     "website": "https://www.mountwashington.ca",
-    "tier": 2
+    "tier": 2,
+    "slug": "mount-washington-alpine-resort"
   },
   {
     "id": "openstreetmap-way-1154306823",
@@ -5808,7 +6254,8 @@
     "baseElevation": 375,
     "verticalDrop": 309,
     "website": "https://www.blackmt.com",
-    "tier": 2
+    "tier": 2,
+    "slug": "black-mountain"
   },
   {
     "id": "openstreetmap-way-1214147821",
@@ -5821,7 +6268,8 @@
     "baseElevation": 1805.2,
     "verticalDrop": 323,
     "website": "https://terrypeak.com/",
-    "tier": 2
+    "tier": 2,
+    "slug": "terry-peak-ski-area"
   },
   {
     "id": "openstreetmap-way-1040649718",
@@ -5834,7 +6282,8 @@
     "baseElevation": 233,
     "verticalDrop": 222,
     "website": "https://www.bluemountain.ca",
-    "tier": 2
+    "tier": 2,
+    "slug": "blue-mountain-ski-resort"
   },
   {
     "id": "openstreetmap-way-476844342",
@@ -5847,6 +6296,7 @@
     "baseElevation": 1155.4,
     "verticalDrop": 1213,
     "website": "https://www.panoramaresort.com",
-    "tier": 1
+    "tier": 1,
+    "slug": "panorama-mountain-resort"
   }
 ]

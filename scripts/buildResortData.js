@@ -107,6 +107,30 @@ function buildId(props) {
   return props.id; // fall back to the openskimap UUID
 }
 
+// ── Slug generation ───────────────────────────────────────────────────────────
+
+function generateSlug(name) {
+  return name
+    .toLowerCase()
+    .replace(/[''\.]/g, '')        // remove apostrophes, periods
+    .replace(/[^a-z0-9]+/g, '-')  // any non-alphanumeric run → single hyphen
+    .replace(/^-+|-+$/g, '')      // trim leading/trailing hyphens
+}
+
+function deduplicateSlugs(resorts) {
+  const seen = new Map()
+  return resorts.map(r => {
+    let slug = generateSlug(r.name)
+    if (seen.has(slug)) {
+      // collision: append region slug to disambiguate
+      slug = `${slug}-${generateSlug(r.region)}`
+      console.log(`  ⚠ Slug collision resolved: "${r.name}" → "${slug}"`)
+    }
+    seen.set(slug, true)
+    return { ...r, slug }
+  })
+}
+
 async function main() {
   console.log('Fetching OpenSkiMap GeoJSON…');
   let response;
@@ -183,23 +207,27 @@ async function main() {
     r.tier = tier1Ids.has(r.id) ? 1 : 2;
   });
 
+  // ── Slug generation ───────────────────────────────────────────────────────
+  console.log('\nGenerating slugs…');
+  const resortsWithSlugs = deduplicateSlugs(resorts);
+
   // ── Write output ──────────────────────────────────────────────────────────
   const outDir = join(__dirname, '..', 'src', 'data');
   mkdirSync(outDir, { recursive: true });
   const outPath = join(outDir, 'resorts.json');
-  writeFileSync(outPath, JSON.stringify(resorts, null, 2));
+  writeFileSync(outPath, JSON.stringify(resortsWithSlugs, null, 2));
 
   // ── Summary ───────────────────────────────────────────────────────────────
   const countByCountry = {};
-  resorts.forEach((r) => {
+  resortsWithSlugs.forEach((r) => {
     countByCountry[r.country] = (countByCountry[r.country] || 0) + 1;
   });
 
-  const tier1Count = resorts.filter((r) => r.tier === 1).length;
-  const tier2Count = resorts.filter((r) => r.tier === 2).length;
+  const tier1Count = resortsWithSlugs.filter((r) => r.tier === 1).length;
+  const tier2Count = resortsWithSlugs.filter((r) => r.tier === 2).length;
 
   console.log('\n=== Summary ===');
-  console.log(`Total resorts written: ${resorts.length}`);
+  console.log(`Total resorts written: ${resortsWithSlugs.length}`);
   console.log('By country:');
   Object.entries(countByCountry)
     .sort((a, b) => b[1] - a[1])

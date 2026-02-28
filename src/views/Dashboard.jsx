@@ -18,6 +18,7 @@ import { checkPowderAlerts } from '../lib/alerts.js';
 import { getSnowQuality, getSnowAgeHours } from '../lib/snowQuality.js';
 import { getCurrentHourIndex } from '../lib/utils.js';
 import ResortCard from '../components/ResortCard.jsx';
+import SearchResults from '../components/SearchResults.jsx';
 
 // ── Sort options (SPEC.md section 8.1) ────────────────────────────────────────
 const SORT_OPTIONS = [
@@ -247,6 +248,29 @@ export default function Dashboard() {
   const [searchQuery,       setSearchQuery]       = useState('');
   const [searchOpen,        setSearchOpen]        = useState(false);
 
+  // ── Search mode: true when query has non-whitespace content ───────────────
+  const isSearching = searchQuery.trim().length > 0;
+
+  // ── Escape key clears search ────────────────────────────────────────────────
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSearchQuery('');
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  // ── Full-resort search results (all tiers, name + region match) ────────────
+  const searchResults = isSearching
+    ? resorts.filter((r) => {
+        const q = searchQuery.toLowerCase();
+        return (
+          r.name.toLowerCase().includes(q) ||
+          (r.region ?? '').toLowerCase().includes(q)
+        );
+      })
+    : [];
+
   // ── Derived data ───────────────────────────────────────────────────────────
   const tier1 = useMemo(() => resorts.filter((r) => r.tier === 1), [resorts]);
 
@@ -288,7 +312,7 @@ export default function Dashboard() {
       .sort((a, b) => a.label.localeCompare(b.label));
   }, [tier1]);
 
-  // ── Filter ─────────────────────────────────────────────────────────────────
+  // ── Filter (Tier 1 card grid only — search uses its own results path) ──────
   const filteredResorts = useMemo(() => {
     let list = tier1;
 
@@ -300,13 +324,9 @@ export default function Dashboard() {
     if (selectedRegions.size > 0) {
       list = list.filter((r) => selectedRegions.has(r.region));
     }
-    if (searchQuery) {
-      const q = searchQuery.toLowerCase();
-      list = list.filter((r) => r.name.toLowerCase().includes(q));
-    }
 
     return list;
-  }, [tier1, selectedCountries, selectedRegions, searchQuery]);
+  }, [tier1, selectedCountries, selectedRegions]);
 
   // ── Sort: loaded resorts sorted by criteria; loading ones at end ───────────
   const sortedResorts = useMemo(() => {
@@ -463,7 +483,7 @@ export default function Dashboard() {
               onBlur={() => {
                 if (!searchQuery) setSearchOpen(false);
               }}
-              placeholder="Search resorts…"
+              placeholder="Search all resorts…"
               style={{
                 padding: '6px 10px',
                 borderRadius: 6,
@@ -507,66 +527,75 @@ export default function Dashboard() {
         )}
       </div>
 
-      {/* ── Empty state ────────────────────────────────────────────────────── */}
-      {sortedResorts.length === 0 &&
-        (selectedCountries.size > 0 ||
-          selectedRegions.size > 0 ||
-          searchQuery) && (
+      {/* ── Search results: shown instead of card grid when query is active ── */}
+      {isSearching ? (
+        <SearchResults
+          results={searchResults}
+          forecasts={forecasts}
+          query={searchQuery}
+        />
+      ) : (
+        <>
+          {/* ── Empty state (filters only, not search) ───────────────────── */}
+          {sortedResorts.length === 0 &&
+            (selectedCountries.size > 0 || selectedRegions.size > 0) && (
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  padding: '60px 24px',
+                  textAlign: 'center',
+                }}
+              >
+                <p
+                  style={{
+                    fontSize: 16,
+                    color: 'var(--color-text-secondary)',
+                    marginBottom: 16,
+                  }}
+                >
+                  No resorts match your filters.
+                </p>
+                <button
+                  onClick={resetFilters}
+                  style={{
+                    padding: '8px 20px',
+                    borderRadius: 6,
+                    border: 'none',
+                    backgroundColor: 'var(--color-accent)',
+                    color: 'var(--color-bg-dark)',
+                    fontSize: 13,
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                  }}
+                >
+                  Reset filters
+                </button>
+              </div>
+            )}
+
+          {/* ── Responsive card grid (Tier 1 only) ──────────────────────── */}
           <div
             style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              padding: '60px 24px',
-              textAlign: 'center',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(285px, 1fr))',
+              gap: 16,
+              padding: '16px 16px 0',
             }}
           >
-            <p
-              style={{
-                fontSize: 16,
-                color: 'var(--color-text-secondary)',
-                marginBottom: 16,
-              }}
-            >
-              No resorts match your filters.
-            </p>
-            <button
-              onClick={resetFilters}
-              style={{
-                padding: '8px 20px',
-                borderRadius: 6,
-                border: 'none',
-                backgroundColor: 'var(--color-accent)',
-                color: 'var(--color-bg-dark)',
-                fontSize: 13,
-                fontWeight: 600,
-                cursor: 'pointer',
-              }}
-            >
-              Reset filters
-            </button>
+            {sortedResorts.map((resort) => (
+              <ResortCard
+                key={resort.id}
+                resort={resort}
+                forecast={forecasts[resort.id] ?? null}
+                loading={loadingStates[resort.id] ?? 'idle'}
+                maxValue_cm={globalMaxSnow}
+              />
+            ))}
           </div>
-        )}
-
-      {/* ── Responsive card grid ──────────────────────────────────────────── */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(285px, 1fr))',
-          gap: 16,
-          padding: '16px 16px 0',
-        }}
-      >
-        {sortedResorts.map((resort) => (
-          <ResortCard
-            key={resort.id}
-            resort={resort}
-            forecast={forecasts[resort.id] ?? null}
-            loading={loadingStates[resort.id] ?? 'idle'}
-            maxValue_cm={globalMaxSnow}
-          />
-        ))}
-      </div>
+        </>
+      )}
     </div>
   );
 }

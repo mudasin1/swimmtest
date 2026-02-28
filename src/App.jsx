@@ -56,7 +56,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/compare" element={<Comparison />} />
-            <Route path="/resort/:id" element={<ResortDetail />} />
+            <Route path="/resort/:slug" element={<ResortDetail />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

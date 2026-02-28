@@ -195,7 +195,7 @@ export default function ResortCard({ resort, forecast, loading, maxValue_cm = 1 
   }
 
   function handleCardClick() {
-    navigate(`/resort/${resort.id}`);
+    navigate(`/resort/${resort.slug}`);
   }
 
   return (
