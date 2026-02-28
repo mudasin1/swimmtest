@@ -1,0 +1,22 @@
+{
+  "name": "snowdesk",
+  "version": "1.0.0",
+  "description": "SnowDesk personal ski forecast data layer",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest --testEnvironment=node",
+    "build-resorts": "node scripts/buildResortData.js"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/src/lib/__tests__/**/*.test.js"
+    ]
+  },
+  "dependencies": {
+    "undici": "^7.22.0"
+  }
+}
