@@ -6,12 +6,11 @@
  *
  * Props: { resort, forecast }
  *
- * Named export AISummarySection is a ready-to-wire placeholder for Agent 5.
- * Agent 5 imports it as:
- *   import { AISummarySection } from '../views/ResortDetail/tabs/SnowSummary.jsx'
- * and passes `summary` (string) and `summaryLoading` (boolean) props.
+ * Named export AISummarySection accepts { summary, summaryLoading, error, onRetry }.
+ * AI summary is lazy-loaded via useEffect only when this tab mounts.
  */
 
+import { useState, useEffect } from 'react'
 import { getSnowQuality, getSnowAgeHours, getBestWindow } from '../../../lib/snowQuality.js';
 import {
   getCurrentHourIndex,
@@ -21,6 +20,8 @@ import {
   toMph,
 } from '../../../lib/utils.js';
 import QualityBadge from '../../../components/QualityBadge.jsx';
+import { getCachedOrFetchSummary } from '../../../lib/aiSummary.js'
+import { useApp, useSetSummary } from '../../../context/AppContext.jsx'
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -37,18 +38,21 @@ function buildDailyArray(daily, count = 7) {
 // ── AISummarySection ──────────────────────────────────────────────────────────
 
 /**
- * Placeholder AI summary section.
+ * AI summary section.
  *
- * Agent 5 will pass real data into these props:
- *   summary        {string|undefined}  — AI-generated 3-sentence summary
- *   summaryLoading {boolean}           — true while the API call is in-flight
+ * Props:
+ *   summary        {string|null}    — AI-generated 3-sentence summary
+ *   summaryLoading {boolean}        — true while the API call is in-flight
+ *   error          {string|null}    — error message if the API call failed
+ *   onRetry        {function}       — callback to clear error and retry fetch
  *
  * States:
  *   summaryLoading=true  → pulsing 3-line skeleton
+ *   error set            → muted-red error message + retry button
  *   summary set          → rendered text, 14px, line-height 1.6
  *   neither              → "Forecast summary not available" in muted text
  */
-export function AISummarySection({ summary, summaryLoading }) {
+export function AISummarySection({ summary, summaryLoading, error, onRetry }) {
   // ── Loading skeleton ──────────────────────────────────────────────────────
   if (summaryLoading) {
     return (
@@ -65,6 +69,39 @@ export function AISummarySection({ summary, summaryLoading }) {
             }}
           />
         ))}
+      </div>
+    );
+  }
+
+  // ── Error state ───────────────────────────────────────────────────────────
+  if (error) {
+    return (
+      <div>
+        <p
+          style={{
+            fontSize: 14,
+            color: '#EF4444',
+            margin: '0 0 10px',
+          }}
+        >
+          Summary unavailable: {error}
+        </p>
+        {onRetry && (
+          <button
+            onClick={onRetry}
+            style={{
+              fontSize: 12,
+              color: 'var(--color-text-secondary)',
+              background: 'none',
+              border: '1px solid var(--color-bg-card-hover)',
+              borderRadius: 4,
+              padding: '4px 10px',
+              cursor: 'pointer',
+            }}
+          >
+            Retry
+          </button>
+        )}
       </div>
     );
   }
@@ -134,6 +171,42 @@ function StatTile({ label, value }) {
 // ── SnowSummary ───────────────────────────────────────────────────────────────
 
 export default function SnowSummary({ resort, forecast }) {
+  // ── AI summary state ───────────────────────────────────────────────────────
+  const { summaries } = useApp()
+  const setSummary = useSetSummary()
+  const [summaryLoading, setSummaryLoading] = useState(false)
+  const [summaryError, setSummaryError] = useState(null)
+  // retryCount is incremented on retry to re-trigger the effect (deps include it)
+  const [retryCount, setRetryCount] = useState(0)
+
+  useEffect(() => {
+    // Only fetch if we don't already have a summary for this resort today
+    // eslint-disable-next-line no-unused-vars
+    const todayKey = `${resort.id}_${new Date().toISOString().split('T')[0]}`
+    if (summaries[resort.id]) return   // already loaded in this session
+    if (!forecast) return               // forecast not ready yet
+
+    setSummaryLoading(true)
+    setSummaryError(null)
+
+    getCachedOrFetchSummary(resort, forecast)
+      .then(text => {
+        setSummary(resort.id, text)
+        setSummaryLoading(false)
+      })
+      .catch(err => {
+        console.error(err)
+        setSummaryError(err.message)
+        setSummaryLoading(false)
+      })
+  }, [resort.id, !!forecast, retryCount]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  function handleRetry() {
+    setSummary(resort.id, null)   // clear from context so effect's early-return is bypassed
+    setSummaryError(null)
+    setRetryCount(c => c + 1)    // increment to re-trigger the effect
+  }
+
   const idx = getCurrentHourIndex(forecast.hourly.time, forecast.timezone);
 
   // ── Quality ───────────────────────────────────────────────────────────────
@@ -249,8 +322,12 @@ export default function SnowSummary({ resort, forecast }) {
         >
           AI Summary
         </div>
-        {/* Agent 5 will replace these prop defaults with real data */}
-        <AISummarySection summary={undefined} summaryLoading={false} />
+        <AISummarySection
+          summary={summaries[resort.id] ?? null}
+          summaryLoading={summaryLoading}
+          error={summaryError}
+          onRetry={handleRetry}
+        />
       </div>
     </div>
   );
