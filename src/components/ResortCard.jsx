@@ -30,12 +30,15 @@ import LoadingSkeleton from './LoadingSkeleton.jsx';
 import SnowBar from './SnowBar.jsx';
 import QualityBadge from './QualityBadge.jsx';
 
-// ── Alert threshold options (SPEC.md section 6) ──────────────────────────────
+// ── Alert threshold options (SPEC.md section 6 / Agent 6 Deliverable 7) ───────
+// "Off" = no override (resort uses the global default threshold).
+// Numeric options set a per-resort threshold override (stored in cm).
 const THRESHOLD_OPTIONS = [
-  { label: '6"',  value: 15.24 },
-  { label: '8"',  value: 20.32 },
-  { label: '10"', value: 25.40 },
-  { label: '12"', value: 30.48 },
+  { label: 'Off',  value: null  },
+  { label: '6"',   value: 15.24 },
+  { label: '8"',   value: 20.32 },
+  { label: '10"',  value: 25.40 },
+  { label: '12"',  value: 30.48 },
 ];
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -178,9 +181,16 @@ export default function ResortCard({ resort, forecast, loading, maxValue_cm = 1 
   const safeMax = maxValue_cm > 0 ? maxValue_cm : 1;
 
   function handleThresholdSelect(value) {
-    updateSettings({
-      thresholds: { ...settings.thresholds, [resort.id]: value },
-    });
+    if (value === null) {
+      // "Off" — remove the per-resort override so it falls back to the default.
+      // Does NOT disable alerts for this resort (SPEC.md section 6 / Deliverable 7).
+      const { [resort.id]: _removed, ...rest } = settings.thresholds ?? {};
+      updateSettings({ thresholds: rest });
+    } else {
+      updateSettings({
+        thresholds: { ...(settings.thresholds ?? {}), [resort.id]: value },
+      });
+    }
     setShowPopover(false);
   }
 
@@ -227,15 +237,19 @@ export default function ResortCard({ resort, forecast, loading, maxValue_cm = 1 
               ref={bellRef}
               aria-label="Set powder alert threshold"
               onClick={() => setShowPopover((v) => !v)}
+              title={hasThreshold ? 'Custom alert threshold set' : 'Set alert threshold'}
               style={{
                 background: 'none',
                 border: 'none',
                 cursor: 'pointer',
                 padding: '2px 4px',
                 fontSize: 16,
+                // Filled + orange when override set; muted + dimmed when using default
                 color: hasThreshold
-                  ? 'var(--color-alert-powder)'
+                  ? 'var(--color-snow-powder)'
                   : 'var(--color-text-secondary)',
+                opacity: hasThreshold ? 1 : 0.5,
+                transition: 'color 0.15s, opacity 0.15s',
               }}
             >
               🔔
@@ -270,33 +284,41 @@ export default function ResortCard({ resort, forecast, loading, maxValue_cm = 1 
                 >
                   Alert threshold
                 </div>
-                {THRESHOLD_OPTIONS.map((opt) => (
-                  <button
-                    key={opt.value}
-                    onClick={() => handleThresholdSelect(opt.value)}
-                    style={{
-                      display: 'block',
-                      width: '100%',
-                      textAlign: 'left',
-                      background: 'none',
-                      border: 'none',
-                      cursor: 'pointer',
-                      padding: '6px 12px',
-                      fontSize: 13,
-                      color:
-                        settings.thresholds?.[resort.id] === opt.value
+                {THRESHOLD_OPTIONS.map((opt) => {
+                  // Determine whether this option is currently active.
+                  // "Off" (null) is active when no per-resort override is set.
+                  const currentValue = settings.thresholds?.[resort.id];
+                  const isActive =
+                    opt.value === null
+                      ? currentValue === undefined
+                      : currentValue === opt.value;
+
+                  return (
+                    <button
+                      key={String(opt.value)}
+                      onClick={() => handleThresholdSelect(opt.value)}
+                      style={{
+                        display: 'block',
+                        width: '100%',
+                        textAlign: 'left',
+                        border: 'none',
+                        cursor: 'pointer',
+                        padding: '6px 12px',
+                        fontSize: 13,
+                        backgroundColor: isActive
+                          ? 'rgba(249,115,22,0.15)'
+                          : 'transparent',
+                        color: isActive
                           ? 'var(--color-snow-powder)'
                           : 'var(--color-text-primary)',
-                      fontWeight:
-                        settings.thresholds?.[resort.id] === opt.value
-                          ? 600
-                          : 400,
-                    }}
-                  >
-                    {opt.label}
-                    {settings.thresholds?.[resort.id] === opt.value && ' ✓'}
-                  </button>
-                ))}
+                        fontWeight: isActive ? 600 : 400,
+                      }}
+                    >
+                      {opt.label}
+                      {isActive && ' ✓'}
+                    </button>
+                  );
+                })}
               </div>
             )}
           </div>

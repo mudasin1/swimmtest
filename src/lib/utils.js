@@ -100,6 +100,26 @@ export function degreesToCardinal(degrees) {
   return dirs[idx];
 }
 
+// ── Time display helpers ──────────────────────────────────────────────────────
+
+/**
+ * Converts a Unix timestamp (ms) to a human-readable relative string.
+ * Used in the Settings alert history section (SPEC.md section 8.4 / Agent 6 Deliverable 6).
+ *
+ * @param {number} timestamp  Unix timestamp in milliseconds
+ * @returns {string}
+ */
+export function timeAgo(timestamp) {
+  const diff = Date.now() - timestamp;
+  const minutes = Math.floor(diff / 60000);
+  const hours = Math.floor(diff / 3600000);
+  const days = Math.floor(diff / 86400000);
+  if (minutes < 60) return 'Less than an hour ago';
+  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+  if (days === 1) return 'Yesterday';
+  return `${days} days ago`;
+}
+
 // ── Hour index ────────────────────────────────────────────────────────────────
 
 /**

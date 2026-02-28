@@ -11,8 +11,10 @@ import {
   useApp,
   useSetForecast,
   useSetLoadingState,
+  useUpdateAlertLog,
 } from '../context/AppContext';
 import { loadTier1Forecasts } from '../lib/dataLoader.js';
+import { checkPowderAlerts } from '../lib/alerts.js';
 import { getSnowQuality, getSnowAgeHours } from '../lib/snowQuality.js';
 import { getCurrentHourIndex } from '../lib/utils.js';
 import ResortCard from '../components/ResortCard.jsx';
@@ -181,15 +183,26 @@ function FilterDropdown({ label, options, selected, onToggle, onClear }) {
 // ── Dashboard ─────────────────────────────────────────────────────────────────
 
 export default function Dashboard() {
-  const { resorts, forecasts, loadingStates } = useApp();
+  const { resorts, forecasts, loadingStates, settings, alertLog } = useApp();
   const setForecast      = useSetForecast();
   const setLoadingState  = useSetLoadingState();
+  const updateAlertLog   = useUpdateAlertLog();
 
   // Stable refs so in-flight batch callbacks always dispatch to current functions
   const setForecastRef     = useRef(setForecast);
   const setLoadingStateRef = useRef(setLoadingState);
   useEffect(() => { setForecastRef.current = setForecast; },      [setForecast]);
   useEffect(() => { setLoadingStateRef.current = setLoadingState; }, [setLoadingState]);
+
+  // Refs to always read the latest context values inside the once-on-mount effect
+  const forecastsRef     = useRef(forecasts);
+  const settingsRef      = useRef(settings);
+  const alertLogRef      = useRef(alertLog);
+  const updateAlertLogRef = useRef(updateAlertLog);
+  useEffect(() => { forecastsRef.current = forecasts; },         [forecasts]);
+  useEffect(() => { settingsRef.current = settings; },           [settings]);
+  useEffect(() => { alertLogRef.current = alertLog; },           [alertLog]);
+  useEffect(() => { updateAlertLogRef.current = updateAlertLog; }, [updateAlertLog]);
 
   // ── Kick off batch loading once on mount ───────────────────────────────────
   const loadStarted = useRef(false);
@@ -206,7 +219,24 @@ export default function Dashboard() {
       resorts,
       (id, data)   => setForecastRef.current(id, data),
       (id, status) => setLoadingStateRef.current(id, status)
-    );
+    ).then(() => {
+      // After all tier 1 forecasts have loaded, run the powder alert check.
+      // Use refs to access the latest state values (the closure captures the
+      // initial empty forecasts/settings/alertLog from mount time).
+      const updatedLog = checkPowderAlerts({
+        resorts: resorts.filter((r) => r.tier === 1),
+        forecasts: forecastsRef.current,
+        thresholds: settingsRef.current.thresholds,
+        defaultThreshold: settingsRef.current.defaultThreshold,
+        alertLog: alertLogRef.current,
+        onAlertFired: (resort, snowfall_in) => {
+          console.log(`🔔 Alert fired: ${resort.name} — ${snowfall_in}"`);
+        },
+      });
+      Object.entries(updatedLog).forEach(([id, ts]) =>
+        updateAlertLogRef.current(id, ts)
+      );
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
