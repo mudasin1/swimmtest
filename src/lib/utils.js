@@ -78,3 +78,52 @@ export function getDayLabel(dateStr) {
 
   return inputDate.toLocaleDateString('en-US', { weekday: 'short' });
 }
+
+// ── Hour index ────────────────────────────────────────────────────────────────
+
+/**
+ * Finds the index in the Open-Meteo hourly.time array that is closest to the
+ * current local time at the resort.
+ *
+ * Open-Meteo time strings are like "2026-02-27T14:00" — local time in the
+ * resort's timezone (i.e. the timezone returned in the response).
+ *
+ * @param {string[]} timeArray  Open-Meteo hourly.time array
+ * @param {string}   timezone   IANA timezone string (e.g. "America/Denver")
+ * @returns {number}            Index of the current (or closest past) hour
+ */
+export function getCurrentHourIndex(timeArray, timezone) {
+  if (!timeArray || timeArray.length === 0) return 0;
+  try {
+    const now = new Date();
+    // Build "YYYY-MM-DDTHH:00" in the resort's local timezone
+    const parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: timezone,
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      hour12: false,
+    }).formatToParts(now);
+
+    const p = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
+    // Some engines return '24' for midnight — normalize to '00'
+    const hour = p.hour === '24' ? '00' : p.hour;
+    const localHour = `${p.year}-${p.month}-${p.day}T${hour}:00`;
+
+    const exactIdx = timeArray.indexOf(localHour);
+    if (exactIdx !== -1) return exactIdx;
+
+    // Binary search for the closest past hour (array is sorted ascending)
+    let lo = 0;
+    let hi = timeArray.length - 1;
+    while (lo < hi) {
+      const mid = (lo + hi + 1) >> 1;
+      if (timeArray[mid] <= localHour) lo = mid;
+      else hi = mid - 1;
+    }
+    return Math.max(0, lo);
+  } catch {
+    return 0;
+  }
+}
