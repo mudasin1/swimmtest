@@ -79,6 +79,27 @@ export function getDayLabel(dateStr) {
   return inputDate.toLocaleDateString('en-US', { weekday: 'short' });
 }
 
+// ── Geography helpers ─────────────────────────────────────────────────────────
+
+/** Meters → miles, rounded to 1 decimal place. (SPEC.md Conditions tab) */
+export function toMiles(meters) {
+  return Math.round((meters / 1609.34) * 10) / 10;
+}
+
+/**
+ * Wind direction in degrees → 8-point cardinal string.
+ * 0°/360° = N, 45° = NE, 90° = E, etc.
+ * (SPEC.md Conditions tab)
+ *
+ * @param {number} degrees  Wind direction in degrees (0–360)
+ * @returns {'N'|'NE'|'E'|'SE'|'S'|'SW'|'W'|'NW'}
+ */
+export function degreesToCardinal(degrees) {
+  const dirs = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+  const idx = Math.round(((degrees % 360) + 360) % 360 / 45) % 8;
+  return dirs[idx];
+}
+
 // ── Hour index ────────────────────────────────────────────────────────────────
 
 /**
