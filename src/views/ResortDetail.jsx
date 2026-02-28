@@ -171,7 +171,7 @@ function AlertBell({ resort, settings, updateSettings }) {
 // ── ResortDetail ──────────────────────────────────────────────────────────────
 
 export default function ResortDetail() {
-  const { id }      = useParams();
+  const { slug }    = useParams();
   const navigate    = useNavigate();
 
   const { resorts, forecasts, loadingStates, savedResortIds, settings } = useApp();
@@ -183,7 +183,7 @@ export default function ResortDetail() {
   // Tab state: local only — not in URL, not in global context (SPEC.md Deliverable 4)
   const [activeTab, setActiveTab] = useState(0);
 
-  const resort       = resorts.find((r) => r.id === id) ?? null;
+  const resort       = resorts.find((r) => r.slug === slug) ?? null;
   const forecast     = resort ? (forecasts[resort.id] ?? null) : null;
   const loadingState = resort ? (loadingStates[resort.id] ?? 'idle') : 'idle';
 
@@ -249,7 +249,7 @@ export default function ResortDetail() {
           Resort not found
         </h1>
         <p style={{ color: 'var(--color-text-secondary)', fontSize: 14 }}>
-          No resort with id: <code>{id}</code>
+          No resort with slug: <code>{slug}</code>
         </p>
       </div>
     );

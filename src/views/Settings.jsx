@@ -184,6 +184,10 @@ export default function Settings() {
     return resorts.find((r) => r.id === id)?.name ?? id;
   }
 
+  function getResortSlug(id) {
+    return resorts.find((r) => r.id === id)?.slug ?? id;
+  }
+
   // ── Render ─────────────────────────────────────────────────────────────────
 
   return (
@@ -526,7 +530,7 @@ export default function Settings() {
                 >
                   {/* Resort name — clickable link to detail page */}
                   <button
-                    onClick={() => navigate(`/resort/${resortId}`)}
+                    onClick={() => navigate(`/resort/${getResortSlug(resortId)}`)}
                     style={{
                       background: 'none',
                       border: 'none',

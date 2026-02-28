@@ -326,7 +326,7 @@ export default function ComparisonTable() {
             return (
               <tr
                 key={resort.id}
-                onClick={() => navigate(`/resort/${resort.id}`)}
+                onClick={() => navigate(`/resort/${resort.slug}`)}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.backgroundColor = 'var(--color-bg-card-hover)')
                 }
