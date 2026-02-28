@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── SPEC.md Section 9 — Design System Color Tokens ────────────────────── */
+:root {
+  /* Snowfall bar colors */
+  --color-snow-light: #3B82F6;    /* blue  — < 6"       */
+  --color-snow-powder: #F97316;   /* orange — ≥ 6"       */
+  --color-snow-mixed: #8B5CF6;    /* purple — rain + snow */
+
+  /* Snow quality colors */
+  --color-quality-powder: #1E90FF;
+  --color-quality-wind: #F97316;
+  --color-quality-packed: #38BDF8;
+  --color-quality-soft: #4ADE80;
+  --color-quality-spring: #FBBF24;
+  --color-quality-icy: #EF4444;
+  --color-quality-variable: #9CA3AF;
+
+  /* Alert states */
+  --color-alert-powder: #F97316;  /* orange glow on card  */
+  --color-alert-active: #3B82F6;  /* blue glow — snowing now */
+
+  /* App chrome */
+  --color-bg-dark: #0F172A;       /* slate-900 */
+  --color-bg-card: #1E293B;       /* slate-800 */
+  --color-bg-card-hover: #334155; /* slate-700 */
+  --color-text-primary: #F1F5F9;  /* slate-100 */
+  --color-text-secondary: #94A3B8;/* slate-400 */
+  --color-accent: #38BDF8;        /* sky-400   */
+}
+
+/* ── Base — dark mode is the default and only mode for v1 ──────────────── */
+body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Typography scale (SPEC.md section 9) ───────────────────────────────── */
+/* Resort name: 18px semibold */
+.resort-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Data values: 24px bold (snowfall numbers) */
+.data-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Labels: 12px uppercase tracking-wide, muted */
+.data-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  color: var(--color-text-secondary);
+}
+
+/* AI summary text: 14px regular, line-height 1.6 */
+.ai-summary {
+  font-size: 14px;
+  line-height: 1.6;
+}
