@@ -49,11 +49,6 @@ function getSnowCellBg(snowfall_cm, rain_cm) {
   return 'transparent';
 }
 
-/** Truncate resort name at 20 chars with ellipsis if longer. */
-function truncateName(name) {
-  return name.length > 20 ? name.slice(0, 20) + '…' : name;
-}
-
 // Column definitions — mobileHide = true → hidden on screens < 768px
 const COLUMNS = [
   { key: 'name',    label: 'Resort',   mobileHide: false, align: 'left'   },
@@ -203,9 +198,18 @@ export default function ComparisonTable() {
 
   // ── Render ──────────────────────────────────────────────────────────────────
   return (
-    <div style={{ overflowX: 'auto' }}>
+    <div
+      style={{
+        overflowX: 'auto',
+        overflowY: 'auto',
+        maxHeight: 'calc(100vh - 180px)',
+        margin: '0 -24px',
+        padding: '0 24px',
+      }}
+    >
       <table
         style={{
+          minWidth: 600,
           width: '100%',
           borderCollapse: 'collapse',
           fontSize: 13,
@@ -222,7 +226,7 @@ export default function ComparisonTable() {
                 onClick={() => handleHeaderClick(col.key)}
                 style={{
                   position: 'sticky',
-                  top: 60,
+                  top: 0,
                   zIndex: 10,
                   padding: '10px 12px',
                   textAlign: col.align,
@@ -340,12 +344,19 @@ export default function ComparisonTable() {
                 }}
               >
                 {/* Resort name */}
-                <td style={{ padding: '10px 12px', textAlign: 'left' }}>
-                  <span
-                    title={resort.name}
-                    style={{ fontWeight: 500 }}
-                  >
-                    {truncateName(resort.name)}
+                <td
+                  title={resort.name}
+                  style={{
+                    padding: '10px 12px',
+                    textAlign: 'left',
+                    maxWidth: '160px',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  <span style={{ fontWeight: 500 }}>
+                    {resort.name}
                   </span>
                 </td>
 

@@ -33,10 +33,10 @@ const WEATHER_CODES = {
   61: { label: 'Light Rain',          icon: '🌧️'   },
   71: { label: 'Light Snow',          icon: '🌨️'   },
   73: { label: 'Moderate Snow',       icon: '❄️'   },
-  75: { label: 'Heavy Snow',          icon: '❄️❄️' },
+  75: { label: 'Heavy Snow',          icon: '❄️'   },
   77: { label: 'Snow Grains',         icon: '🌨️'   },
   85: { label: 'Snow Showers',        icon: '🌨️'   },
-  86: { label: 'Heavy Snow Showers',  icon: '❄️❄️' },
+  86: { label: 'Heavy Snow Showers',  icon: '❄️'   },
 };
 
 /**
