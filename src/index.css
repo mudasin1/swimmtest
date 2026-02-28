@@ -66,3 +66,8 @@ body {
   font-size: 14px;
   line-height: 1.6;
 }
+
+/* ── Spinner animation (ResortDetail loading state) ─────────────────────── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,22 +1,22 @@
 /**
- * src/views/Comparison.jsx — stub
+ * src/views/Comparison.jsx
  *
- * Full sortable comparison table built by Agent 4.
+ * /compare route — renders the sortable comparison table.
  * SPEC.md section 8.2.
  */
+
+import ComparisonTable from '../components/ComparisonTable.jsx';
 
 export default function Comparison() {
   return (
     <div className="p-6">
       <h1
-        className="text-2xl font-semibold mb-2"
+        className="text-2xl font-bold mb-6"
         style={{ color: 'var(--color-text-primary)' }}
       >
-        Comparison
+        Compare Resorts
       </h1>
-      <p style={{ color: 'var(--color-text-secondary)' }}>
-        Comparison view coming in Agent 4
-      </p>
+      <ComparisonTable />
     </div>
-  )
+  );
 }
