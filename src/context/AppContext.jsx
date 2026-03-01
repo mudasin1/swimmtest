@@ -8,12 +8,12 @@
 import { createContext, useContext, useReducer, useEffect } from 'react'
 import resortsData from '../data/resorts.json'
 
-// ── localStorage keys (SPEC.md section 10) ──────────────────────────────────
-const LS_SAVED_RESORTS = 'snowdesk_saved_resorts'
+// ── localStorage keys (SPEC.md section 10) ─────────────────────────────────-
+const LS_SAVED_RESORTS = 'snowdesk_saved_slugs'  // Changed: now stores slugs not IDs
 const LS_SETTINGS      = 'snowdesk_settings'
 const LS_ALERT_LOG     = 'snowdesk_alert_log'
 
-// ── Sensible defaults (SPEC.md section 10) ──────────────────────────────────
+// ── Sensible defaults (SPEC.md section 10) ─────────────────────────────────-
 const DEFAULT_SETTINGS = {
   defaultThreshold: 15.24, // 6 inches in cm
   thresholds: {},
@@ -30,11 +30,11 @@ function readLS(key, fallback) {
   }
 }
 
-// ── Initial state ────────────────────────────────────────────────────────────
+// ── Initial state ───────────────────────────────────────────────────────────-
 function buildInitialState() {
   return {
     resorts: resortsData,                           // loaded synchronously from local import
-    savedResortIds: readLS(LS_SAVED_RESORTS, []),
+    savedSlugs: readLS(LS_SAVED_RESORTS, []),       // Changed: slugs instead of IDs
     forecasts: {},                                   // in-memory only
     summaries: {},                                   // in-memory only
     loadingStates: {},                               // in-memory only
@@ -43,17 +43,17 @@ function buildInitialState() {
   }
 }
 
-// ── Reducer ──────────────────────────────────────────────────────────────────
+// ── Reducer ─────────────────────────────────────────────────────────────────-
 function appReducer(state, action) {
   switch (action.type) {
     case 'TOGGLE_SAVED_RESORT': {
-      const id = action.payload
-      const already = state.savedResortIds.includes(id)
+      const slug = action.payload  // Changed: now passing slug instead of id
+      const already = state.savedSlugs.includes(slug)
       return {
         ...state,
-        savedResortIds: already
-          ? state.savedResortIds.filter((r) => r !== id)
-          : [...state.savedResortIds, id],
+        savedSlugs: already
+          ? state.savedSlugs.filter((s) => s !== slug)
+          : [...state.savedSlugs, slug],
       }
     }
 
@@ -92,17 +92,17 @@ function appReducer(state, action) {
   }
 }
 
-// ── Context ──────────────────────────────────────────────────────────────────
+// ── Context ─────────────────────────────────────────────────────────────────-
 const AppContext = createContext(null)
 const AppDispatchContext = createContext(null)
 
 export function AppProvider({ children }) {
   const [state, dispatch] = useReducer(appReducer, null, buildInitialState)
 
-  // Persist savedResortIds to localStorage whenever it changes
+  // Persist savedSlugs to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem(LS_SAVED_RESORTS, JSON.stringify(state.savedResortIds))
-  }, [state.savedResortIds])
+    localStorage.setItem(LS_SAVED_RESORTS, JSON.stringify(state.savedSlugs))
+  }, [state.savedSlugs])
 
   // Persist settings to localStorage whenever they change
   useEffect(() => {
@@ -138,12 +138,12 @@ function useDispatch() {
   return dispatch
 }
 
-// ── Action dispatcher hooks (SPEC.md section 10) ─────────────────────────────
+// ── Action dispatcher hooks (SPEC.md section 10) ─────────────────────────----
 
-/** Toggles a resortId in savedResortIds. */
+/** Toggles a resort slug in savedSlugs. */
 export function useSaveResort() {
   const dispatch = useDispatch()
-  return (resortId) => dispatch({ type: 'TOGGLE_SAVED_RESORT', payload: resortId })
+  return (slug) => dispatch({ type: 'TOGGLE_SAVED_RESORT', payload: slug })
 }
 
 /** Sets forecast data for a resortId (in-memory only). */
