@@ -1,102 +1,140 @@
 /**
  * src/components/TopNav.jsx
  *
- * Fixed top navigation bar, 60px tall.
- * SPEC.md section "Deliverable 5": app name, nav links, saved-resort badge,
- * responsive hamburger on small screens.
+ * Top navigation bar with auth state
  */
 
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import { Snowflake, Menu, X } from 'lucide-react'
+import { useState, useRef, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { useApp } from '../context/AppContext'
+import { signOut } from '../lib/supabase.js'
 
 export default function TopNav() {
-  const { savedSlugs } = useApp()
-  const [menuOpen, setMenuOpen] = useState(false)
+  const { user, profile, savedSlugs } = useApp()
+  const navigate = useNavigate()
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const dropdownRef = useRef(null)
 
-  const linkClass = ({ isActive }) =>
-    [
-      'text-sm font-medium transition-colors px-3 py-1 rounded',
-      isActive
-        ? 'text-[var(--color-accent)] border-b-2 border-[var(--color-accent)]'
-        : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]',
-    ].join(' ')
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    if (!dropdownOpen) return
+    function handler(e) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [dropdownOpen])
 
-  const savedCount = savedSlugs?.length ?? 0
+  async function handleSignOut() {
+    try {
+      await signOut()
+      navigate('/')
+    } catch (err) {
+      console.error('Error signing out:', err)
+    }
+  }
+
+  const displayName = profile?.display_name || user?.email?.split('@')[0] || 'User'
 
   return (
-    <nav
-      className="fixed top-0 left-0 right-0 z-50 h-[60px] flex items-center px-4 md:px-6 shadow-md"
-      style={{ backgroundColor: 'var(--color-bg-card)' }}
+    <nav 
+      className="fixed top-0 left-0 right-0 h-[60px] z-50 px-4 flex items-center justify-between border-b"
+      style={{ 
+        backgroundColor: 'var(--color-bg-dark)',
+        borderColor: 'var(--color-bg-card)'
+      }}
     >
-      <div className="flex items-center gap-2 mr-8">
-        <Snowflake size={22} style={{ color: 'var(--color-accent)' }} aria-hidden="true" />
-        <span
-          className="text-lg font-semibold tracking-tight"
+      <div className="flex items-center gap-6">
+        <Link 
+          to="/" 
+          className="text-xl font-bold hover:opacity-80 transition-opacity"
           style={{ color: 'var(--color-text-primary)' }}
         >
-          SnowDesk
-        </span>
-      </div>
-
-      <div className="hidden md:flex items-center gap-1 flex-1">
-        <NavLink to="/" end className={linkClass}>
-          Dashboard
-          {savedCount > 0 && (
-            <span
-              className="ml-1.5 inline-flex items-center justify-center rounded-full text-xs font-bold w-5 h-5"
-              style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-bg-dark)' }}
-            >
-              {savedCount}
-            </span>
-          )}
-        </NavLink>
-
-        <NavLink to="/compare" className={linkClass}>
-          Compare
-        </NavLink>
-
-        <NavLink to="/settings" className={linkClass}>
-          Settings
-        </NavLink>
-      </div>
-
-      <button
-        className="md:hidden ml-auto p-2 rounded"
-        style={{ color: 'var(--color-text-secondary)' }}
-        onClick={() => setMenuOpen((o) => !o)}
-        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-      >
-        {menuOpen ? <X size={22} /> : <Menu size={22} />}
-      </button>
-
-      {menuOpen && (
-        <div
-          className="absolute top-[60px] left-0 right-0 flex flex-col gap-1 px-4 py-3 md:hidden shadow-lg"
-          style={{ backgroundColor: 'var(--color-bg-card)' }}
-        >
-          <NavLink to="/" end className={linkClass} onClick={() => setMenuOpen(false)}>
+          SnowBro ❄️
+        </Link>
+        
+        <div className="hidden md:flex items-center gap-4">
+          <Link 
+            to="/"
+            className="text-sm hover:opacity-80 transition-opacity"
+            style={{ color: 'var(--color-text-secondary)' }}
+          >
             Dashboard
-            {savedCount > 0 && (
-              <span
-                className="ml-1.5 inline-flex items-center justify-center rounded-full text-xs font-bold w-5 h-5"
-                style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-bg-dark)' }}
-              >
-                {savedCount}
-              </span>
-            )}
-          </NavLink>
-
-          <NavLink to="/compare" className={linkClass} onClick={() => setMenuOpen(false)}>
+          </Link>
+          <Link 
+            to="/compare"
+            className="text-sm hover:opacity-80 transition-opacity"
+            style={{ color: 'var(--color-text-secondary)' }}
+          >
             Compare
-          </NavLink>
-
-          <NavLink to="/settings" className={linkClass} onClick={() => setMenuOpen(false)}>
-            Settings
-          </NavLink>
+          </Link>
         </div>
-      )}
+      </div>
+
+      <div className="flex items-center gap-4">
+        {user ? (
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="flex items-center gap-2 px-3 py-1.5 rounded border hover:opacity-80 transition-opacity"
+              style={{ 
+                borderColor: 'var(--color-bg-card-hover)',
+                color: 'var(--color-text-primary)'
+              }}
+            >
+              <span className="text-sm font-medium">{displayName}</span>
+              <span className="text-xs">▾</span>
+            </button>
+
+            {dropdownOpen && (
+              <div 
+                className="absolute right-0 top-full mt-2 w-48 rounded-lg border shadow-lg py-1"
+                style={{ 
+                  backgroundColor: 'var(--color-bg-card)',
+                  borderColor: 'var(--color-bg-card-hover)'
+                }}
+              >
+                <Link
+                  to="/profile"
+                  className="block px-4 py-2 text-sm hover:opacity-80 transition-opacity"
+                  style={{ color: 'var(--color-text-primary)' }}
+                  onClick={() => setDropdownOpen(false)}
+                >
+                  Profile
+                </Link>
+                <Link
+                  to="/settings"
+                  className="block px-4 py-2 text-sm hover:opacity-80 transition-opacity"
+                  style={{ color: 'var(--color-text-primary)' }}
+                  onClick={() => setDropdownOpen(false)}
+                >
+                  Settings
+                </Link>
+                <div className="border-t my-1" style={{ borderColor: 'var(--color-bg-card-hover)' }} />
+                <button
+                  onClick={handleSignOut}
+                  className="block w-full text-left px-4 py-2 text-sm text-red-400 hover:opacity-80 transition-opacity"
+                >
+                  Sign Out
+                </button>
+              </div>
+            )}
+          </div>
+        ) : (
+          <Link
+            to="/login"
+            className="px-4 py-1.5 rounded text-sm font-medium hover:opacity-80 transition-opacity"
+            style={{ 
+              backgroundColor: 'var(--color-accent)',
+              color: 'var(--color-bg-dark)'
+            }}
+          >
+            Log In
+          </Link>
+        )}
+      </div>
     </nav>
   )
 }
