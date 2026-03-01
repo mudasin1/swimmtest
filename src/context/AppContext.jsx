@@ -1,19 +1,20 @@
 /**
  * src/context/AppContext.jsx
  *
- * Global state management for SnowDesk.
+ * Global state management for SnowDesk with Supabase Auth integration.
  * Conforms to SPEC.md section 10 — state shape and localStorage keys.
  */
 
-import { createContext, useContext, useReducer, useEffect } from 'react'
+import { createContext, useContext, useReducer, useEffect, useCallback } from 'react'
 import resortsData from '../data/resorts.json'
+import { supabase } from '../lib/supabase.js'
 
-// ── localStorage keys (SPEC.md section 10) ─────────────────────────────────-
-const LS_SAVED_RESORTS = 'snowdesk_saved_slugs'  // Changed: now stores slugs not IDs
+// ── localStorage keys (fallback for logged-out users) ───────────────────────
+const LS_SAVED_RESORTS = 'snowdesk_saved_slugs'
 const LS_SETTINGS      = 'snowdesk_settings'
 const LS_ALERT_LOG     = 'snowdesk_alert_log'
 
-// ── Sensible defaults (SPEC.md section 10) ─────────────────────────────────-
+// ── Sensible defaults ────────────────────────────────────────────────────────
 const DEFAULT_SETTINGS = {
   defaultThreshold: 15.24, // 6 inches in cm
   thresholds: {},
@@ -30,31 +31,44 @@ function readLS(key, fallback) {
   }
 }
 
-// ── Initial state ───────────────────────────────────────────────────────────-
+// ── Initial state ────────────────────────────────────────────────────────────
 function buildInitialState() {
   return {
-    resorts: resortsData,                           // loaded synchronously from local import
-    savedSlugs: readLS(LS_SAVED_RESORTS, []),       // Changed: slugs instead of IDs
-    forecasts: {},                                   // in-memory only
-    summaries: {},                                   // in-memory only
-    loadingStates: {},                               // in-memory only
+    resorts: resortsData,
+    savedSlugs: [], // Will be loaded after auth check
+    forecasts: {},
+    summaries: {},
+    loadingStates: {},
     settings: readLS(LS_SETTINGS, DEFAULT_SETTINGS),
     alertLog: readLS(LS_ALERT_LOG, {}),
+    user: null,
+    profile: null,
+    authInitialized: false,
   }
 }
 
-// ── Reducer ─────────────────────────────────────────────────────────────────-
+// ── Reducer ──────────────────────────────────────────────────────────────────
 function appReducer(state, action) {
   switch (action.type) {
+    case 'SET_USER':
+      return { ...state, user: action.payload }
+    
+    case 'SET_PROFILE':
+      return { ...state, profile: action.payload }
+    
+    case 'SET_AUTH_INITIALIZED':
+      return { ...state, authInitialized: true }
+
+    case 'SET_SAVED_SLUGS':
+      return { ...state, savedSlugs: action.payload }
+
     case 'TOGGLE_SAVED_RESORT': {
-      const slug = action.payload  // Changed: now passing slug instead of id
+      const slug = action.payload
       const already = state.savedSlugs.includes(slug)
-      return {
-        ...state,
-        savedSlugs: already
-          ? state.savedSlugs.filter((s) => s !== slug)
-          : [...state.savedSlugs, slug],
-      }
+      const newSlugs = already
+        ? state.savedSlugs.filter((s) => s !== slug)
+        : [...state.savedSlugs, slug]
+      return { ...state, savedSlugs: newSlugs }
     }
 
     case 'SET_FORECAST':
@@ -92,30 +106,155 @@ function appReducer(state, action) {
   }
 }
 
-// ── Context ─────────────────────────────────────────────────────────────────-
+// ── Context ──────────────────────────────────────────────────────────────────
 const AppContext = createContext(null)
 const AppDispatchContext = createContext(null)
 
 export function AppProvider({ children }) {
   const [state, dispatch] = useReducer(appReducer, null, buildInitialState)
 
-  // Persist savedSlugs to localStorage whenever it changes
+  // ── Auth State Management ────────────────────────────────────────────────
   useEffect(() => {
-    localStorage.setItem(LS_SAVED_RESORTS, JSON.stringify(state.savedSlugs))
-  }, [state.savedSlugs])
+    // Check for existing session on mount
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session?.user) {
+        dispatch({ type: 'SET_USER', payload: session.user })
+        loadUserProfile(session.user.id)
+        loadSavedResortsFromSupabase(session.user.id)
+      } else {
+        // Load from localStorage if no session
+        const savedSlugs = readLS(LS_SAVED_RESORTS, [])
+        dispatch({ type: 'SET_SAVED_SLUGS', payload: savedSlugs })
+      }
+      dispatch({ type: 'SET_AUTH_INITIALIZED' })
+    })
 
-  // Persist settings to localStorage whenever they change
+    // Listen for auth changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      const user = session?.user ?? null
+      dispatch({ type: 'SET_USER', payload: user })
+      
+      if (user) {
+        loadUserProfile(user.id)
+        loadSavedResortsFromSupabase(user.id)
+      } else {
+        dispatch({ type: 'SET_PROFILE', payload: null })
+        // Load from localStorage when logged out
+        const savedSlugs = readLS(LS_SAVED_RESORTS, [])
+        dispatch({ type: 'SET_SAVED_SLUGS', payload: savedSlugs })
+      }
+    })
+
+    return () => subscription.unsubscribe()
+  }, [])
+
+  // ── Load user profile ────────────────────────────────────────────────────
+  async function loadUserProfile(userId) {
+    try {
+      const { data, error } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('id', userId)
+        .single()
+      
+      if (error) throw error
+      
+      dispatch({ type: 'SET_PROFILE', payload: data })
+      
+      // Update settings from profile if units specified
+      if (data?.units) {
+        dispatch({ type: 'UPDATE_SETTINGS', payload: { units: data.units } })
+      }
+    } catch (err) {
+      console.error('Error loading profile:', err)
+    }
+  }
+
+  // ── Load saved resorts from Supabase ─────────────────────────────────────
+  async function loadSavedResortsFromSupabase(userId) {
+    try {
+      const { data, error } = await supabase
+        .from('saved_resorts')
+        .select('resort_slug')
+        .eq('user_id', userId)
+      
+      if (error) throw error
+      
+      const slugs = data.map(r => r.resort_slug)
+      dispatch({ type: 'SET_SAVED_SLUGS', payload: slugs })
+    } catch (err) {
+      console.error('Error loading saved resorts:', err)
+      // Fallback to localStorage
+      const savedSlugs = readLS(LS_SAVED_RESORTS, [])
+      dispatch({ type: 'SET_SAVED_SLUGS', payload: savedSlugs })
+    }
+  }
+
+  // ── Persist to localStorage (for logged-out users or fallback) ────────────
+  useEffect(() => {
+    if (!state.authInitialized) return
+    
+    // Only save to localStorage if user is NOT logged in
+    // (When logged in, we sync to Supabase instead)
+    if (!state.user && state.savedSlugs) {
+      localStorage.setItem(LS_SAVED_RESORTS, JSON.stringify(state.savedSlugs))
+    }
+  }, [state.savedSlugs, state.user, state.authInitialized])
+
   useEffect(() => {
     localStorage.setItem(LS_SETTINGS, JSON.stringify(state.settings))
   }, [state.settings])
 
-  // Persist alertLog to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem(LS_ALERT_LOG, JSON.stringify(state.alertLog))
   }, [state.alertLog])
 
+  // ── Save/Unsave Resort with Supabase sync ────────────────────────────────
+  const saveResort = useCallback(async (slug) => {
+    // Optimistic update
+    dispatch({ type: 'TOGGLE_SAVED_RESORT', payload: slug })
+    
+    // Sync to Supabase if logged in
+    if (state.user) {
+      const isCurrentlySaved = state.savedSlugs.includes(slug)
+      
+      try {
+        if (isCurrentlySaved) {
+          // Remove from Supabase
+          await supabase
+            .from('saved_resorts')
+            .delete()
+            .eq('user_id', state.user.id)
+            .eq('resort_slug', slug)
+        } else {
+          // Add to Supabase
+          await supabase
+            .from('saved_resorts')
+            .insert([{ user_id: state.user.id, resort_slug: slug }])
+        }
+      } catch (err) {
+        console.error('Error syncing saved resort:', err)
+        // Revert optimistic update on error
+        dispatch({ type: 'TOGGLE_SAVED_RESORT', payload: slug })
+      }
+    }
+  }, [state.user, state.savedSlugs])
+
+  const unsaveResort = useCallback(async (slug) => {
+    if (state.savedSlugs.includes(slug)) {
+      await saveResort(slug) // Toggle off
+    }
+  }, [state.savedSlugs, saveResort])
+
+  // ── Context value ────────────────────────────────────────────────────────
+  const contextValue = {
+    ...state,
+    saveResort,
+    unsaveResort,
+  }
+
   return (
-    <AppContext.Provider value={state}>
+    <AppContext.Provider value={contextValue}>
       <AppDispatchContext.Provider value={dispatch}>
         {children}
       </AppDispatchContext.Provider>
@@ -124,8 +263,6 @@ export function AppProvider({ children }) {
 }
 
 // ── Primary hook ─────────────────────────────────────────────────────────────
-
-/** Returns the full global state object (SPEC.md section 10). */
 export function useApp() {
   const ctx = useContext(AppContext)
   if (!ctx) throw new Error('useApp must be used within AppProvider')
@@ -138,39 +275,28 @@ function useDispatch() {
   return dispatch
 }
 
-// ── Action dispatcher hooks (SPEC.md section 10) ─────────────────────────----
+// ── Action dispatcher hooks ─────────────────────────────────────────────────
 
-/** Toggles a resort slug in savedSlugs. */
-export function useSaveResort() {
-  const dispatch = useDispatch()
-  return (slug) => dispatch({ type: 'TOGGLE_SAVED_RESORT', payload: slug })
-}
-
-/** Sets forecast data for a resortId (in-memory only). */
 export function useSetForecast() {
   const dispatch = useDispatch()
   return (resortId, data) => dispatch({ type: 'SET_FORECAST', payload: { resortId, data } })
 }
 
-/** Sets AI summary text for a resortId (in-memory only). */
 export function useSetSummary() {
   const dispatch = useDispatch()
   return (resortId, text) => dispatch({ type: 'SET_SUMMARY', payload: { resortId, text } })
 }
 
-/** Sets loading state for a resortId: 'idle' | 'loading' | 'done' | 'error' */
 export function useSetLoadingState() {
   const dispatch = useDispatch()
   return (resortId, status) => dispatch({ type: 'SET_LOADING_STATE', payload: { resortId, status } })
 }
 
-/** Merges a partial settings update into settings (persisted). */
 export function useUpdateSettings() {
   const dispatch = useDispatch()
   return (partial) => dispatch({ type: 'UPDATE_SETTINGS', payload: partial })
 }
 
-/** Updates the alert log timestamp for a resortId (persisted). */
 export function useUpdateAlertLog() {
   const dispatch = useDispatch()
   return (resortId, timestamp) => dispatch({ type: 'UPDATE_ALERT_LOG', payload: { resortId, timestamp } })
