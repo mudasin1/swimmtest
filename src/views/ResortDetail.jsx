@@ -1,13 +1,13 @@
 /**
  * src/views/ResortDetail.jsx
  *
- * /resort/:id route — full 3-tab resort detail view.
+ * /resort/:slug route — full 3-tab resort detail view.
  * SPEC.md section 8.3 and Deliverable 4.
  *
  * Tabs: Snow Summary | Forecast | Conditions
  *
  * On mount:
- *   1. Read :id param, find resort in context.
+ *   1. Read :slug param, find resort in context.
  *   2. If forecasts[resort.id] already exists: use it immediately (no re-fetch).
  *   3. If not: call loadSingleForecast() from dataLoader.js, show loading state.
  *   4. If resort ID not found in resorts.json: show "Resort not found" with back button.
@@ -168,13 +168,14 @@ function AlertBell({ resort, settings, updateSettings }) {
   );
 }
 
-// ── ResortDetail ──────────────────────────────────────────────────────────────
+// ── ResortDetail ─────────────────────────────────────────────────────────────-
 
 export default function ResortDetail() {
   const { slug }    = useParams();
   const navigate    = useNavigate();
 
-  const { resorts, forecasts, loadingStates, savedResortIds, settings } = useApp();
+  // Changed: using savedSlugs instead of savedResortIds
+  const { resorts, forecasts, loadingStates, savedSlugs, settings } = useApp();
   const saveResort      = useSaveResort();
   const setForecast     = useSetForecast();
   const setLoadingState = useSetLoadingState();
@@ -210,7 +211,7 @@ export default function ResortDetail() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [resort?.id]);
 
-  // ── Back navigation ──────────────────────────────────────────────────────
+  // ── Back navigation ─────────────────────────────────────────────────────-
   function handleBack() {
     // If user navigated directly (no prior history entry), go home instead
     if (window.history.length > 1) {
@@ -255,9 +256,10 @@ export default function ResortDetail() {
     );
   }
 
-  const isSaved = savedResortIds.includes(resort.id);
+  // Changed: Check savedSlugs instead of savedResortIds, use resort.slug
+  const isSaved = savedSlugs.includes(resort.slug);
 
-  // ── Full-page loading state (SPEC.md Deliverable 4 loading layout) ───────
+  // ── Full-page loading state (SPEC.md Deliverable 4 loading layout) ─────--
   if (!forecast || loadingState === 'loading' || loadingState === 'idle') {
     return (
       <div style={{ padding: 24, minHeight: '100vh' }}>
@@ -314,7 +316,7 @@ export default function ResortDetail() {
     );
   }
 
-  // ── Error state ───────────────────────────────────────────────────────────
+  // ── Error state ─────────────────────────────────────────────────────────--
   if (loadingState === 'error') {
     return (
       <div style={{ padding: 24 }}>
@@ -349,11 +351,11 @@ export default function ResortDetail() {
     );
   }
 
-  // ── Full detail view ──────────────────────────────────────────────────────
+  // ── Full detail view ─────────────────────────────────────────────────────-
   return (
     <div style={{ minHeight: '100vh', paddingBottom: 48 }}>
 
-      {/* ── Header: back · name · star · bell ─────────────────────────────── */}
+      {/* ── Header: back · name · star · bell ─────────────────────────────-- */}
       <div
         style={{
           display: 'flex',
@@ -397,9 +399,10 @@ export default function ResortDetail() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
           {/* Save star — reading from shared context, so Dashboard card stays in sync */}
+          {/* Changed: onClick now passes resort.slug */}
           <button
             aria-label={isSaved ? 'Unsave resort' : 'Save resort'}
-            onClick={() => saveResort(resort.id)}
+            onClick={() => saveResort(resort.slug)}
             style={{
               background: 'none',
               border: '1px solid var(--color-bg-card-hover)',
@@ -422,7 +425,7 @@ export default function ResortDetail() {
         </div>
       </div>
 
-      {/* ── Subtitle: region · summit · base elevation ─────────────────────── */}
+      {/* ── Subtitle: region · summit · base elevation ─────────────────────-- */}
       <div
         style={{
           padding: '8px 24px',
