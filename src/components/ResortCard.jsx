@@ -83,7 +83,7 @@ function getCardBorderStyle(powderHit, activeSnow) {
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function ResortCard({ resort, forecast, loading, maxValue_cm = 1 }) {
-  const { savedResortIds, settings } = useApp();
+  const { savedSlugs, settings } = useApp();  // Changed: savedSlugs instead of savedResortIds
   const saveResort = useSaveResort();
   const updateSettings = useUpdateSettings();
   const navigate = useNavigate();
@@ -174,8 +174,8 @@ export default function ResortCard({ resort, forecast, loading, maxValue_cm = 1 
   const windMph  = toMph(forecast.daily.windspeed_10m_max[0] ?? 0);
   const bestDay  = bestWindow ? getDayLabel(bestWindow.date) : '—';
 
-  // Save / alert state
-  const isSaved     = savedResortIds.includes(resort.id);
+  // Save / alert state - Changed to use slug
+  const isSaved     = savedSlugs.includes(resort.slug);
   const hasThreshold = settings.thresholds?.[resort.id] !== undefined;
 
   const safeMax = maxValue_cm > 0 ? maxValue_cm : 1;
@@ -196,6 +196,12 @@ export default function ResortCard({ resort, forecast, loading, maxValue_cm = 1 
 
   function handleCardClick() {
     navigate(`/resort/${resort.slug}`);
+  }
+
+  // Changed: pass resort.slug instead of resort.id
+  function handleSaveClick(e) {
+    e.stopPropagation();
+    saveResort(resort.slug);
   }
 
   return (
@@ -323,10 +329,10 @@ export default function ResortCard({ resort, forecast, loading, maxValue_cm = 1 
             )}
           </div>
 
-          {/* Save star */}
+          {/* Save star - Updated to use handleSaveClick with slug */}
           <button
             aria-label={isSaved ? 'Unsave resort' : 'Save resort'}
-            onClick={() => saveResort(resort.id)}
+            onClick={handleSaveClick}
             style={{
               background: 'none',
               border: 'none',
