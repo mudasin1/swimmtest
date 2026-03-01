@@ -7,6 +7,7 @@
  */
 
 import { useEffect, useRef, useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import {
   useApp,
   useSetForecast,
@@ -184,10 +185,13 @@ function FilterDropdown({ label, options, selected, onToggle, onClear }) {
 // ── Dashboard ─────────────────────────────────────────────────────────────────
 
 export default function Dashboard() {
-  const { resorts, forecasts, loadingStates, settings, alertLog } = useApp();
+  const { resorts, forecasts, loadingStates, settings, alertLog, user, savedSlugs } = useApp();
   const setForecast      = useSetForecast();
   const setLoadingState  = useSetLoadingState();
   const updateAlertLog   = useUpdateAlertLog();
+
+  // Toggle state for My Resorts vs All Resorts (default to My Resorts if logged in)
+  const [showMyResorts, setShowMyResorts] = useState(!!user);
 
   // Stable refs so in-flight batch callbacks always dispatch to current functions
   const setForecastRef     = useRef(setForecast);
@@ -368,6 +372,15 @@ export default function Dashboard() {
     return [...sorted, ...loading];
   }, [filteredResorts, loadingStates, forecasts, sortBy]);
 
+  // ── Toggle My Resorts vs All Resorts ───────────────────────────────────────
+  const displayedResorts = useMemo(() => {
+    if (showMyResorts && user) {
+      // Show only saved resorts
+      return sortedResorts.filter(r => savedSlugs.includes(r.slug));
+    }
+    return sortedResorts;
+  }, [sortedResorts, showMyResorts, user, savedSlugs]);
+
   // ── Toggle helpers ─────────────────────────────────────────────────────────
   function toggleCountry(code) {
     setSelectedCountries((prev) => {
@@ -527,6 +540,70 @@ export default function Dashboard() {
         )}
       </div>
 
+      {/* ── My Resorts / All Resorts Toggle (logged-in users only) ───────── */}
+      {user && (
+        <div
+          style={{
+            display: 'flex',
+            gap: 8,
+            padding: '12px 16px',
+            borderBottom: '1px solid var(--color-bg-card)',
+          }}
+        >
+          <button
+            onClick={() => setShowMyResorts(true)}
+            style={{
+              padding: '6px 16px',
+              borderRadius: 9999,
+              border: 'none',
+              fontSize: 13,
+              fontWeight: 500,
+              cursor: 'pointer',
+              backgroundColor: showMyResorts ? 'var(--color-accent)' : 'var(--color-bg-card)',
+              color: showMyResorts ? 'var(--color-bg-dark)' : 'var(--color-text-secondary)',
+            }}
+          >
+            My Resorts ({savedSlugs.length})
+          </button>
+          <button
+            onClick={() => setShowMyResorts(false)}
+            style={{
+              padding: '6px 16px',
+              borderRadius: 9999,
+              border: 'none',
+              fontSize: 13,
+              fontWeight: 500,
+              cursor: 'pointer',
+              backgroundColor: !showMyResorts ? 'var(--color-accent)' : 'var(--color-bg-card)',
+              color: !showMyResorts ? 'var(--color-bg-dark)' : 'var(--color-text-secondary)',
+            }}
+          >
+            All Resorts
+          </button>
+        </div>
+      )}
+
+      {/* ── Guest prompt (logged-out users only) ───────────────────────────── */}
+      {!user && (
+        <div
+          style={{
+            padding: '10px 16px',
+            textAlign: 'center',
+            fontSize: 13,
+            color: 'var(--color-text-secondary)',
+            borderBottom: '1px solid var(--color-bg-card)',
+          }}
+        >
+          <Link
+            to="/login"
+            style={{ color: 'var(--color-accent)', textDecoration: 'none' }}
+          >
+            Log in
+          </Link>{' '}
+          to save your favorite resorts
+        </div>
+      )}
+
       {/* ── Search results: shown instead of card grid when query is active ── */}
       {isSearching ? (
         <SearchResults
@@ -536,8 +613,47 @@ export default function Dashboard() {
         />
       ) : (
         <>
+          {/* ── Empty state for My Resorts when no saved resorts ─────────── */}
+          {user && showMyResorts && displayedResorts.length === 0 && (
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                padding: '60px 24px',
+                textAlign: 'center',
+              }}
+            >
+              <p
+                style={{
+                  fontSize: 16,
+                  color: 'var(--color-text-secondary)',
+                  marginBottom: 16,
+                }}
+              >
+                You haven't saved any resorts yet.
+              </p>
+              <button
+                onClick={() => setShowMyResorts(false)}
+                style={{
+                  padding: '8px 20px',
+                  borderRadius: 6,
+                  border: 'none',
+                  backgroundColor: 'var(--color-accent)',
+                  color: 'var(--color-bg-dark)',
+                  fontSize: 13,
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                }}
+              >
+                Browse All Resorts
+              </button>
+            </div>
+          )}
+
           {/* ── Empty state (filters only, not search) ───────────────────── */}
-          {sortedResorts.length === 0 &&
+          {!user || !showMyResorts ? (
+            displayedResorts.length === 0 &&
             (selectedCountries.size > 0 || selectedRegions.size > 0) && (
               <div
                 style={{
@@ -573,27 +689,30 @@ export default function Dashboard() {
                   Reset filters
                 </button>
               </div>
-            )}
+            )
+          ) : null}
 
           {/* ── Responsive card grid (Tier 1 only) ──────────────────────── */}
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(285px, 1fr))',
-              gap: 16,
-              padding: '16px 16px 0',
-            }}
-          >
-            {sortedResorts.map((resort) => (
-              <ResortCard
-                key={resort.id}
-                resort={resort}
-                forecast={forecasts[resort.id] ?? null}
-                loading={loadingStates[resort.id] ?? 'idle'}
-                maxValue_cm={globalMaxSnow}
-              />
-            ))}
-          </div>
+          {!(user && showMyResorts && displayedResorts.length === 0) && (
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(285px, 1fr))',
+                gap: 16,
+                padding: '16px 16px 0',
+              }}
+            >
+              {displayedResorts.map((resort) => (
+                <ResortCard
+                  key={resort.id}
+                  resort={resort}
+                  forecast={forecasts[resort.id] ?? null}
+                  loading={loadingStates[resort.id] ?? 'idle'}
+                  maxValue_cm={globalMaxSnow}
+                />
+              ))}
+            </div>
+          )}
         </>
       )}
     </div>
