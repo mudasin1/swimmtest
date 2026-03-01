@@ -12,10 +12,9 @@ import { Snowflake, Menu, X } from 'lucide-react'
 import { useApp } from '../context/AppContext'
 
 export default function TopNav() {
-  const { savedResortIds } = useApp()
+  const { savedSlugs } = useApp()
   const [menuOpen, setMenuOpen] = useState(false)
 
-  // Shared active-link style helper for NavLink
   const linkClass = ({ isActive }) =>
     [
       'text-sm font-medium transition-colors px-3 py-1 rounded',
@@ -24,18 +23,15 @@ export default function TopNav() {
         : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]',
     ].join(' ')
 
+  const savedCount = savedSlugs?.length ?? 0
+
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 h-[60px] flex items-center px-4 md:px-6 shadow-md"
       style={{ backgroundColor: 'var(--color-bg-card)' }}
     >
-      {/* ── Brand ── */}
       <div className="flex items-center gap-2 mr-8">
-        <Snowflake
-          size={22}
-          style={{ color: 'var(--color-accent)' }}
-          aria-hidden="true"
-        />
+        <Snowflake size={22} style={{ color: 'var(--color-accent)' }} aria-hidden="true" />
         <span
           className="text-lg font-semibold tracking-tight"
           style={{ color: 'var(--color-text-primary)' }}
@@ -44,31 +40,28 @@ export default function TopNav() {
         </span>
       </div>
 
-      {/* ── Desktop nav links ── */}
       <div className="hidden md:flex items-center gap-1 flex-1">
         <NavLink to="/" end className={linkClass}>
           Dashboard
-          {savedResortIds.length > 0 && (
+          {savedCount > 0 && (
             <span
               className="ml-1.5 inline-flex items-center justify-center rounded-full text-xs font-bold w-5 h-5"
-              style={{
-                backgroundColor: 'var(--color-accent)',
-                color: 'var(--color-bg-dark)',
-              }}
+              style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-bg-dark)' }}
             >
-              {savedResortIds.length}
+              {savedCount}
             </span>
           )}
         </NavLink>
+
         <NavLink to="/compare" className={linkClass}>
           Compare
         </NavLink>
+
         <NavLink to="/settings" className={linkClass}>
           Settings
         </NavLink>
       </div>
 
-      {/* ── Mobile hamburger toggle ── */}
       <button
         className="md:hidden ml-auto p-2 rounded"
         style={{ color: 'var(--color-text-secondary)' }}
@@ -78,43 +71,28 @@ export default function TopNav() {
         {menuOpen ? <X size={22} /> : <Menu size={22} />}
       </button>
 
-      {/* ── Mobile dropdown ── */}
       {menuOpen && (
         <div
           className="absolute top-[60px] left-0 right-0 flex flex-col gap-1 px-4 py-3 md:hidden shadow-lg"
           style={{ backgroundColor: 'var(--color-bg-card)' }}
         >
-          <NavLink
-            to="/"
-            end
-            className={linkClass}
-            onClick={() => setMenuOpen(false)}
-          >
+          <NavLink to="/" end className={linkClass} onClick={() => setMenuOpen(false)}>
             Dashboard
-            {savedResortIds.length > 0 && (
+            {savedCount > 0 && (
               <span
                 className="ml-1.5 inline-flex items-center justify-center rounded-full text-xs font-bold w-5 h-5"
-                style={{
-                  backgroundColor: 'var(--color-accent)',
-                  color: 'var(--color-bg-dark)',
-                }}
+                style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-bg-dark)' }}
               >
-                {savedResortIds.length}
+                {savedCount}
               </span>
             )}
           </NavLink>
-          <NavLink
-            to="/compare"
-            className={linkClass}
-            onClick={() => setMenuOpen(false)}
-          >
+
+          <NavLink to="/compare" className={linkClass} onClick={() => setMenuOpen(false)}>
             Compare
           </NavLink>
-          <NavLink
-            to="/settings"
-            className={linkClass}
-            onClick={() => setMenuOpen(false)}
-          >
+
+          <NavLink to="/settings" className={linkClass} onClick={() => setMenuOpen(false)}>
             Settings
           </NavLink>
         </div>
