@@ -64,10 +64,10 @@ const COLUMNS = [
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function ComparisonTable() {
-  const { resorts, forecasts, loadingStates, savedResortIds, settings } = useApp();
+  const { resorts, forecasts, loadingStates, savedSlugs, settings } = useApp();
   const navigate = useNavigate();
 
-  // ── Sort state ──────────────────────────────────────────────────────────────
+  // ── Sort state ─────────────────────────────────────────────────────────────-
   // sortCol === null means "default" (24hr descending)
   const [sortCol, setSortCol] = useState(null);
   const [sortDir, setSortDir] = useState('desc');
@@ -103,15 +103,15 @@ export default function ComparisonTable() {
     return sortCol === col || (sortCol === null && col === 'snow24');
   }
 
-  // ── Resorts to display ──────────────────────────────────────────────────────
+  // ── Resorts to display ─────────────────────────────────────────────────────-
   const visibleResorts = useMemo(() => {
     const tier1 = resorts.filter((r) => r.tier === 1);
     // Tier 2: only include saved resorts that already have a loaded forecast
     const savedTier2 = resorts.filter(
-      (r) => r.tier !== 1 && savedResortIds.includes(r.id) && forecasts[r.id]
+      (r) => r.tier !== 1 && savedSlugs.includes(r.slug) && forecasts[r.id]
     );
     return [...tier1, ...savedTier2];
-  }, [resorts, savedResortIds, forecasts]);
+  }, [resorts, savedSlugs, forecasts]);
 
   // ── Sorted rows ─────────────────────────────────────────────────────────────
   const sorted = useMemo(() => {
@@ -148,8 +148,8 @@ export default function ComparisonTable() {
           return effectiveDir === 'asc' ? va - vb : vb - va;
         }
         case 'snow48': {
-          const va = fa.daily.snowfall_sum[1] ?? 0;
-          const vb = fb.daily.snowfall_sum[1] ?? 0;
+          const va = (fa.daily.snowfall_sum[0] ?? 0) + (fa.daily.snowfall_sum[1] ?? 0);
+          const vb = (fb.daily.snowfall_sum[0] ?? 0) + (fb.daily.snowfall_sum[1] ?? 0);
           return effectiveDir === 'asc' ? va - vb : vb - va;
         }
         case 'snow7d': {
@@ -196,53 +196,19 @@ export default function ComparisonTable() {
     return [...sortedLoaded, ...loading];
   }, [visibleResorts, forecasts, sortCol, sortDir]);
 
-  // ── Render ──────────────────────────────────────────────────────────────────
+  // ── Render ─────────────────────────────────────────────────────────────────-
   return (
-    <div
-      style={{
-        overflowX: 'auto',
-        overflowY: 'auto',
-        maxHeight: 'calc(100vh - 180px)',
-        margin: '0 -24px',
-        padding: '0 24px',
-      }}
-    >
-      <table
-        style={{
-          minWidth: 600,
-          width: '100%',
-          borderCollapse: 'collapse',
-          fontSize: 13,
-          color: 'var(--color-text-primary)',
-        }}
-      >
+    <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+      <table className="min-w-[640px] w-full border-collapse text-[13px] text-[var(--color-text-primary)]">
         {/* ── Header ── */}
-        <thead>
+        <thead className="sticky top-0 z-10 bg-[var(--color-bg-dark)]">
           <tr>
             {COLUMNS.map((col) => (
               <th
                 key={col.key}
-                className={col.mobileHide ? 'hidden md:table-cell' : ''}
+                className={`${col.mobileHide ? 'hidden md:table-cell' : ''} px-3 py-2.5 text-left text-[11px] font-semibold uppercase tracking-wider cursor-pointer select-none border-b border-[var(--color-bg-card)] whitespace-nowrap ${isActiveSort(col.key) ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-secondary)]'}`}
+                style={{ textAlign: col.align }}
                 onClick={() => handleHeaderClick(col.key)}
-                style={{
-                  position: 'sticky',
-                  top: 0,
-                  zIndex: 10,
-                  padding: '10px 12px',
-                  textAlign: col.align,
-                  fontSize: 11,
-                  fontWeight: 600,
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                  cursor: 'pointer',
-                  userSelect: 'none',
-                  backgroundColor: 'var(--color-bg-dark)',
-                  color: isActiveSort(col.key)
-                    ? 'var(--color-accent)'
-                    : 'var(--color-text-secondary)',
-                  borderBottom: '1px solid var(--color-bg-card)',
-                  whiteSpace: 'nowrap',
-                }}
               >
                 {col.label}
                 {getSortIndicator(col.key)}
@@ -258,12 +224,7 @@ export default function ComparisonTable() {
             <tr>
               <td
                 colSpan={COLUMNS.length}
-                style={{
-                  textAlign: 'center',
-                  padding: '48px 20px',
-                  color: 'var(--color-text-secondary)',
-                  fontSize: 14,
-                }}
+                className="text-center py-12 text-[var(--color-text-secondary)] text-sm"
               >
                 No forecast data loaded yet
               </td>
@@ -281,22 +242,15 @@ export default function ComparisonTable() {
                 <tr key={resort.id}>
                   <td
                     colSpan={COLUMNS.length}
-                    style={{ padding: '8px 12px', borderBottom: '1px solid var(--color-bg-card)' }}
+                    className="px-3 py-2 border-b border-[var(--color-bg-card)]"
                   >
-                    <div
-                      className="animate-pulse"
-                      style={{
-                        height: 24,
-                        borderRadius: 4,
-                        backgroundColor: 'var(--color-bg-card)',
-                      }}
-                    />
+                    <div className="animate-pulse h-6 rounded bg-[var(--color-bg-card)]" />
                   </td>
                 </tr>
               );
             }
 
-            // ── Derive row data ───────────────────────────────────────────────
+            // ── Derive row data ─────────────────────────────────────────────--
             const idx = getCurrentHourIndex(forecast.hourly.time, forecast.timezone);
             const currentTemp = forecast.hourly.temperature_2m[idx] ?? 0;
             const tempDisplay = settings.units === 'metric'
@@ -305,8 +259,8 @@ export default function ComparisonTable() {
 
             const snow24cm = forecast.daily.snowfall_sum[0] ?? 0;
             const rain24cm = forecast.daily.rain_sum[0]    ?? 0;
-            const snow48cm = forecast.daily.snowfall_sum[1] ?? 0;
-            const rain48cm = forecast.daily.rain_sum[1]    ?? 0;
+            const snow48cm = (forecast.daily.snowfall_sum[0] ?? 0) + (forecast.daily.snowfall_sum[1] ?? 0);
+            const rain48cm = (forecast.daily.rain_sum[0] ?? 0) + (forecast.daily.rain_sum[1] ?? 0);
 
             const snow7dCm  = forecast.daily.snowfall_sum.slice(0, 7).reduce((s, x) => s + x, 0);
             const snow7dIn  = toInches(snow7dCm);
@@ -331,57 +285,24 @@ export default function ComparisonTable() {
               <tr
                 key={resort.id}
                 onClick={() => navigate(`/resort/${resort.slug}`)}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = 'var(--color-bg-card-hover)')
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = 'transparent')
-                }
-                style={{
-                  cursor: 'pointer',
-                  transition: 'background-color 0.1s',
-                  borderBottom: '1px solid var(--color-bg-card)',
-                }}
+                className="cursor-pointer transition-colors hover:bg-[var(--color-bg-card-hover)] border-b border-[var(--color-bg-card)]"
               >
-                {/* Resort name */}
+                {/* Resort name - fixed truncation */}
                 <td
                   title={resort.name}
-                  style={{
-                    padding: '10px 12px',
-                    textAlign: 'left',
-                    maxWidth: '160px',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    whiteSpace: 'nowrap',
-                  }}
+                  className="max-w-[160px] px-3 py-2.5 text-left overflow-hidden text-ellipsis whitespace-nowrap"
                 >
-                  <span style={{ fontWeight: 500 }}>
-                    {resort.name}
-                  </span>
+                  <span className="font-medium">{resort.name}</span>
                 </td>
 
-                {/* Region */}
-                <td
-                  className="hidden md:table-cell"
-                  style={{
-                    padding: '10px 12px',
-                    textAlign: 'left',
-                    color: 'var(--color-text-secondary)',
-                  }}
-                >
+                {/* Region - hidden on mobile */}
+                <td className="hidden md:table-cell px-3 py-2.5 text-left text-[var(--color-text-secondary)]">
                   {resort.region ?? '—'}
                 </td>
 
-                {/* Now: weather icon + current temp */}
-                <td style={{ padding: '10px 12px', textAlign: 'center' }}>
-                  <span
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 5,
-                      justifyContent: 'center',
-                    }}
-                  >
+                {/* Now: weather icon + current temp - SINGLE ICON ONLY */}
+                <td className="px-3 py-2.5 text-center">
+                  <span className="inline-flex items-center gap-1 justify-center">
                     <WeatherIcon code={nowWeatherCode} size={16} />
                     <span>{tempDisplay}</span>
                   </span>
@@ -389,53 +310,32 @@ export default function ComparisonTable() {
 
                 {/* 24hr snowfall — with cell tint */}
                 <td
-                  style={{
-                    padding: '10px 12px',
-                    textAlign: 'center',
-                    backgroundColor: getSnowCellBg(snow24cm, rain24cm),
-                  }}
+                  className="px-3 py-2.5 text-center"
+                  style={{ backgroundColor: getSnowCellBg(snow24cm, rain24cm) }}
                 >
                   {toInches(snow24cm)}&quot;
                 </td>
 
                 {/* 48hr snowfall — with cell tint */}
                 <td
-                  style={{
-                    padding: '10px 12px',
-                    textAlign: 'center',
-                    backgroundColor: getSnowCellBg(snow48cm, rain48cm),
-                  }}
+                  className="px-3 py-2.5 text-center"
+                  style={{ backgroundColor: getSnowCellBg(snow48cm, rain48cm) }}
                 >
                   {toInches(snow48cm)}&quot;
                 </td>
 
                 {/* 7-Day total — bold if ≥ 24" */}
-                <td
-                  style={{
-                    padding: '10px 12px',
-                    textAlign: 'center',
-                    fontWeight: snow7dIn >= 24 ? 700 : 400,
-                  }}
-                >
+                <td className={`px-3 py-2.5 text-center ${snow7dIn >= 24 ? 'font-bold' : ''}`}>
                   {snow7dIn}&quot;
                 </td>
 
                 {/* Quality badge */}
-                <td style={{ padding: '10px 12px', textAlign: 'center' }}>
+                <td className="px-3 py-2.5 text-center">
                   <QualityBadge quality={quality} size="sm" />
                 </td>
 
-                {/* Best Day — accent color if today or tomorrow */}
-                <td
-                  className="hidden md:table-cell"
-                  style={{
-                    padding: '10px 12px',
-                    textAlign: 'left',
-                    color: isBestDayNear
-                      ? 'var(--color-accent)'
-                      : 'var(--color-text-secondary)',
-                  }}
-                >
+                {/* Best Day — accent color if today or tomorrow - hidden on mobile */}
+                <td className={`hidden md:table-cell px-3 py-2.5 text-left ${isBestDayNear ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-secondary)]'}`}>
                   {bestDayLabel}
                 </td>
               </tr>
